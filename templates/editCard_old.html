@@ -1,0 +1,576 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="de" xmlns="http://www.w3.org/1999/html">  <!--<![endif]-->
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+<head>
+
+	<!-- META DATA -->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="UTF-8">
+	<title>WIRI - Edition de Carte  </title>
+    <meta name="description" content="A Template by RocknRolla Designs"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP"/>
+    <meta name="author" content="RocknRolla Designs"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600" rel="stylesheet" type="text/css">
+
+
+
+	<link rel="stylesheet" href="{% static 'css/skeleton.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/social.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}" type="text/css" media="screen"/><!-- PrettyPhoto -->
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" type="text/css"/><!-- PrettyPhoto -->
+	<link rel="stylesheet" href="{% static 'css/shortcodes.css' %}" type="text/css"/>
+	<link rel="stylesheet" href="{% static 'css/media.css' %}"><!-- Media Queries -->
+
+
+ 	<link rel="stylesheet" href="{% static 'files/themes_panel/themes_panel.css' %}"><!-- Theme Panel -->
+
+    <link id="layout_color" href="{% static 'css/light.css' %}" rel="stylesheet" type="text/css"/>
+    <link id="primary_color_scheme" href="{% static 'css/colors/yellow.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- LA BONNE ANCIEN  -->
+    <link href="{static 'mane/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'mane/bootstrap-datetimepicker.min.css' %}" rel="stylesheet" media="screen">
+    <!-- Media Queries -->
+
+    <link href="{%static 'bundles/edepot/css/fullcalendar/fullcalendar.css' %}" rel="stylesheet" media="screen">
+    <link href="{%static 'bundles/edepot/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+
+
+     <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.timepicker.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-datepicker.css' %}" />
+
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+
+
+    <!-- /Themes Panel -->
+
+    <style>
+        .nav>li {
+            display: inline-block;
+        }
+    </style>
+
+
+</head>
+
+<body class="onepage" data-spy="scroll" data-target=".navigation">
+ <div id="load"></div>
+
+    <!-- START NAVIGATION -->
+    <nav class="light sticky-nav navigation">
+     <!-- START CONTAINER -->
+      <div class="container clearfix">
+          <div class="four columns">
+              <!-- START LOGO -->
+              <div class="logo large">
+               <a href="/"><img src="{% static 'images/logo.png' %}" title="logo" alt="Logo"/></a>
+              </div>
+              <!-- END LOGO -->
+          </div><!-- END FOUR COLUMNS -->
+
+
+          <div class="twelve columns">
+              <!-- START NAVIGATION MENU ITEMS -->
+              <ul class="main-menu large nav" id="nav">
+                  <li><a href="/dashboard">{{ request.session.first_name }} {{ request.session.last_name }}</a></li>
+                  <li><a href="/accounts/profil">Profil</a></li>
+                  <li><a href="/accounts/logout_account/">Deconnexion</a></li>
+              </ul>
+              <!-- END NAVIGATION MENU ITEMS -->
+          </div><!-- END TWELVE COLUMNS -->
+      </div><!-- END CONTAINER -->
+    </nav>
+    <!-- END NAVIGATION -->
+
+
+
+     <!-- START PAGE WRAP -->
+    <div id="blog" class="page-wrap">
+
+    	<!-- START PROJECT-SINGLE -->
+	    <div class="page multipage">
+
+		<div class="container">
+           <div class="row">
+
+
+
+
+
+		<div class="container">
+
+			<div class="twelve columns " style="width:auto;">
+
+				<div class="post">
+
+ <div class="post-media">
+		<form method="post" enctype="multipart/form-data" action=".">{% csrf_token %}
+
+
+
+                    <!-- height:400px <a href="#"><img src="{ static 'pages_publiques/'%}{{po.carte}}"  alt="portfolio slider"></a>-->
+                    <a href="#"><img src="../../media/{{card.file}}" width="300px"  height="400px" style="margin:0;padding:0;" alt="portfolio slider"></a>
+                   </div>
+
+                    <!-- Avant code  -->
+                    <!---->
+                <!--<div style="position:absolute;top:450px; margin-left:170px; z-index:2;font-size:200%">-->
+                  <!--<input type="submit" value="supprimer" name="ok" style="background:#be0014 ; color:white;font-size:100%" />-->
+                <!--</div>-->
+
+                <!--<div style="position:absolute;top:450px; margin-left:50px ; z-index:2;font-size:200%;background-color:#be0014;color:white;">-->
+                    <!--<a href="/dashboard" class="btn btn-info" role="button" style="color:white;"> Annuler </a>-->
+                <!--</div>-->
+
+
+
+
+				</div>
+
+
+                    </div>
+
+					<div class="widget tags">
+						<div class="widget-title"></div>
+
+
+                        <div style="float:right;margin-top:-10px;">
+
+                            <table>
+                                <tr>
+                                    {% if formChat.content %}
+                                    <td> Nom du groupe &nbsp;</td>
+                                    <td>{{formChat.content}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+                                    {% if form.file %}
+                                    <td> Nom du Fichier &nbsp;</td>
+                                    <td>{{form.file}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+                                    {% if form.category %}
+                                    <td> Nom de la categorie &nbsp;</td>
+                                    <td>{{form.category}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+                                    {% if form.is_public %}
+                                    <td> Visibilite &nbsp;</td>
+                                    <td>{{form.is_public}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+                                    {% if formEvents.name %}
+                                    <td> Nom de l'evenement  &nbsp;</td>
+                                    <td>{{formEvents.name}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+
+                                    {% if formEvents.description %}
+                                    <td> Description de l'evenement &nbsp;</td>
+                                    <td>{{formEvents.description}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+                                    {% if formEvents.date_begin %}
+
+                                        <td> Date debut de l'evenement  &nbsp;</td>
+                                        <td>{{formEvents.date_begin}}</td>
+                                    {% endif %}
+
+                                </tr>
+
+                                <tr>
+
+                                    {% if formEvents.date_end %}
+                                        <td> Date Fin de l'evenement  &nbsp;</td>
+                                        <td>{{formEvents.date_end}}</td>
+                                    {% endif %}
+
+                                </tr>
+
+                                <tr>
+
+                                    {% if formInstitution.name %}
+                                        <td> Nom de l'institution  &nbsp;</td>
+                                        <td>{{formInstitution.name}}</td>
+                                    {% endif %}
+                                </tr>
+
+                                <tr>
+
+                                    {% if formInstitution.description %}
+                                        <td> Description de l'institution  &nbsp;</td>
+                                        <td>{{formInstitution.description}}</td>
+                                    {% endif %}
+                                </tr>
+
+
+                            </table>
+
+
+                            <!--<div> { form.as_p }}</div>-->
+                            <!--<div> { formInstitution.as_p }} </div>-->
+                            <!--<div>{ formEvents.as_p }}</div>-->
+                            <!--<div> { formChat.as_p }} </div>-->
+
+
+
+                            {% for horaires in horaires %}
+                            <div>
+                               <p>{{horaires.days}}</p>
+
+
+                                    {% if horaires.time_degin == None %}
+                                               <input type="time" value="" name="time_degin{{horaires.id}}" id="time_degin1" class="time_degin1" size="5" pattern="([0-9]+):([0-5][0-9]|60)" />
+                                    {% else %}
+                                               <input type="time" value="{{horaires.time_degin}}" name="time_degin{{horaires.id}}" id="time_degin1" class="time_degin1" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+
+                                     {% endif %}
+
+
+                                    {% if horaires.time_end != None %}
+                                        <input type="time" value="{{horaires.time_end}}" name="time_end{{horaires.id}}" id="time_end1" class="time_end1" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+                                    {% else %}
+                                        <input type="time" value="" name="time_end{{horaires.id}}" id="time_end1" class="time_end1" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+                                    {% endif %}
+
+                                    {% if horaires.time_degin2 != None %}
+                                            <input type="time" value="{{horaires.time_degin2}}" name="time_degin2{{horaires.id}}" id="time_degin2" class="time_degin2" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+                                    {% else %}
+                                            <input type="time" value="" name="time_degin2{{horaires.id}}" id="time_degin2" class="time_degin2" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+                                    {% endif %}
+
+                                    {% if horaires.time_end2 != None %}
+                                            <input type="time" value="{{horaires.time_end2}}" name="time_end2{{horaires.id}}" id="time_end2" class="time_end2" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+                                    {% else %}
+                                            <input type="time" value="" name="time_end2{{horaires.id}}" id="time_end2" class="time_end2" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>
+                                    {% endif %}
+
+                               <!--<input type="time" value="{{horaires.time_degin}}" name="time_degin{{horaires.id}}" id="time_degin1" class="time_degin1" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>-->
+                               <!--<input type="time" value="{{horaires.time_end}}" name="time_end{{horaires.id}}" id="time_end1" class="time_end1" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>-->
+                               <!--<input type="time" value="{{horaires.time_degin2}}" name="time_degin2{{horaires.id}}" id="time_degin2" class="time_degin2" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>-->
+                               <!--<input type="time" value="{{horaires.time_end2}}" name="time_end2{{horaires.id}}" id="time_end2" class="time_end2" size="5" pattern="([0-9]+):([0-5][0-9]|60)"/>-->
+                            </div>
+
+                            {% endfor %}
+                                <br/>
+                            <div style="display:inline-block;">
+
+
+                            <!--<input type="submit" value="Enregister" name="ok" style="background:#be0014 ;width:134px;height:46px; color:white;font-size:200%;margin-bottom:2px;" />-->
+                              <!--<input type="submit" value="Supprimer" name="ok" style="color:white;background-color:#be0014; width:134px;height:46px;font-size:200%;vertical-align:top;" />-->
+                                <!--<a href="/dashboard" class="btn btn-info" role="button" style="color:white;background-color:#be0014; width:134px;height:46px;font-size:180%;vertical-align:top;"> &nbsp;&nbsp;Annuler &nbsp;&nbsp; </a>-->
+
+
+                                <button class="btn btn-danger" name="ok" value="Enregister" style="background:#be0014;color:white;width:136px;height:47px;font-size:170%;font-family:Helvetica, Arial, sans-serif!important;display:inline-block;box-shadow: 2px 2px 2px #000;margin-bottom:6px;" onclick="charger();"> Enregistrer </button>&nbsp;
+                                <button class="btn btn-danger"  name="ok"  value="Supprimer" style="background:#be0014;color:white;width:136px;height:47px;font-size:170%;font-family:Helvetica, Arial, sans-serif!important;display:inline-block;box-shadow: 2px 2px 2px #000;margin-bottom:6px;" onclick="charger();"> Supprimer </button>&nbsp;
+                                <!--<input type="submit" value="Enregistrer" style="background:#be0014;color:white;font-size:180%;width:136px;height:46px;font-family:Helvetica, Arial, sans-serif!important;display:inline-block;" onclick="charger();"/>-->
+                                <a href="/dashboard"  class="btn btn-danger" role="button" style="color:white;background-color:#be0014; width:136px;height:47px;font-size:170%;vertical-align:top;font-family:Helvetica, Arial, sans-serif!important;display:inline-block;box-shadow: 2px 2px 2px #000;">&nbsp;Annuler &nbsp;&nbsp; </a>
+
+                             </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+          </form>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+      <!-- START COPYRIGHT SECTION -->
+       <div class="copyright">
+     <div class="container clearfix">
+        <div class="sixteen columns">
+        <div class="copyright-logo"><center><a href="#"><img src="{% static 'images/logo2.png' %}" title="logo" alt="logo"/></a></center></div>
+           <div class="social-icons">
+              <div class="social-icon social-email"><a href="mailto:contact@wiri.com" target="_blank" data-original-title="Email">Email</a></div>
+                  <div class="social-icon social-facebook"><a href="" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                  <div class="social-icon social-twitter"><a href="" target="_blank" data-original-title="Twitter">Twitter</a></div>
+                  <div class="social-icon social-linkedin"><a href="" target="_blank" data-original-title="Linkedin">Linkedin</a></div>
+                  <div class="social-icon social-googleplus"><a href="" target="_blank" data-original-title="Googleplus">Googleplus</a></div>
+                  <div class="social-icon social-youtube"><a href="" target="_blank" data-original-title="Youtube">Youtube</a></div>
+                  <div class="social-icon social-instagram"><a href="" target="_blank" data-original-title="Instagram">Instagram</a></div>
+           </div>
+            <center><p style="color:white;"> &copy; 2017 All Rights Reserved. By <a href="http://www.qualshore.com/fr/fr/accueil-2/">QUALSHORE</a></p></center>
+
+         </div> <!-- END SIXTEEN COLUMNS -->
+	  </div><!-- END CONTAINER -->
+     </div>
+     <!-- END COPYRIGHT SECTION -->
+
+	</div>
+    <!-- END CONTACT SECTION -->
+
+
+   </div><!-- END PAGE WRAP -->
+
+   <div id="back-to-top">
+       <a href="#">Back to Top</a>
+   </div>
+
+
+
+	<!-- JARVIS THEME SCRIPTS -->
+
+
+</body>
+
+
+
+
+
+
+
+ <script type="text/javascript" src="{% static  'mane/jquery/jquery-1.8.3.min.js' %}"></script>
+
+<!--<script type="text/javascript" src="{% static 'js/bootstrap-datepicker.js' %}"></script>-->
+
+
+    <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap.min.js' %}"></script>
+     <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap-datetimepicker.js' %}"></script>
+     <script type="text/javascript" src="{% static  'mane/bootstrap/js/locales/bootstrap-datetimepicker.fr.js' %}"></script>
+<script type="text/javascript">
+
+          	$('#id_date_begin').datetimepicker({
+          	        language:  'fr',
+          	        weekStart: 1,
+          	        format: "yyyy-mm-dd hh:ii:ss",
+                    todayBtn:  1,
+		            autoclose: 1,
+		            todayHighlight: 1,
+		            startView: 2,
+		            minView: 2,
+		            forceParse: 0
+            });
+
+            $('#id_date_end').datetimepicker({
+                      	        language:  'fr',
+                                weekStart: 1,
+                                format: "yyyy-mm-dd hh:ii:ss",
+                                todayBtn:  1,
+                                autoclose: 1,
+                      		    todayHighlight: 1,
+                    		    startView: 2,
+        		                minView: 2,
+        		                forceParse: 0
+                   });
+
+     </script>
+
+
+
+
+
+
+        <script type="text/javascript">
+
+
+
+        $("input[type=time]").change(function() {
+
+
+            a = $('#time_degin1').val();
+            b = $('#time_end1').val();
+            c = $('#time_degin2').val();
+            d = $('#time_end2').val();
+
+
+            // alert($('#time_degin1').val());
+
+            if (b.length != 0){
+                if (a.length != 0){
+                    if ( b < a){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1').val('');
+                    }else{}
+                }
+            }
+
+
+            if (c.length != 0){
+                if (b.length != 0){
+                    if ( c < b){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (d.length != 0){
+                if (c.length != 0){
+                    if ( d < c){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2').val('');
+                    }else{}
+                }
+            }
+
+
+
+
+            aa = $('.time_degin1').val();
+            bb = $('.time_end1').val();
+            cc = $('.time_degin2').val();
+            dd = $('.time_end2').val();
+
+
+            // alert($('#time_degin1').val());
+
+            if (bb.length != 0){
+                if (aa.length != 0){
+                    if ( bb < aa){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('.time_degin1').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cc.length != 0){
+                if (bb.length != 0){
+                    if ( cc < bb){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('.time_degin2').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dd.length != 0){
+                if (cc.length != 0){
+                    if ( dd < cc){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('.time_end2').val('');
+                    }else{}
+                }
+            }
+
+
+
+        });
+
+
+        </script>
+
+
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src=" {% static 'js/pixlr.js' %}"></script>
+   <script type="text/javascript" src=" {% static 'js/pixlr_min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.tweet.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.queryloader2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.slabtext.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fittext.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.easing.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.sticky.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/selectnav.min.js' %}"></script>
+    <script type="text/javascript" src="{ static 'js/SmoothScroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/isotope.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap-modal.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shortcodes.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    <!-- Themes Panel -->
+    <script src="{% static 'files/themes_panel/themes_panel.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'mane/jquery/jquery.timepicker.js' %}"></script>
+
+
+
+<script>
+                $(function() {
+                    $('#time_degin1').timepicker({ 'timeFormat': 'H:i' });
+                    $('#time_end1').timepicker({ 'timeFormat': 'H:i' });
+                    $('#time_degin2').timepicker({ 'timeFormat': 'H:i' });
+                    $('#time_end2').timepicker({ 'timeFormat': 'H:i' });
+                });
+
+
+                $(function() {
+                    $('.time_degin1').timepicker({ 'timeFormat': 'H:i' });
+                    $('.time_end1').timepicker({ 'timeFormat': 'H:i' });
+                    $('.time_degin2').timepicker({ 'timeFormat': 'H:i' });
+                    $('.time_end2').timepicker({ 'timeFormat': 'H:i' });
+                });
+
+</script>
+
+
+
+
+
+
+
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+</html>

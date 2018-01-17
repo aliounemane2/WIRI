@@ -1,0 +1,178 @@
+{%  load static %}
+<html>
+<head>
+    <style>
+        .bgr{
+             // background-image: url("{% static 'images/parallax/parallax4.jpg' %}");
+             //background-image: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+             //background-repeat: no-repeat;
+             // background-attachment: fixed;
+             // left top repeat-x #082648
+        }
+
+body {
+    // display: block;
+    // margin: 8px;
+    // background-image: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+}
+        /*
+        input {
+            border: 1px solid #e8e8e8;
+            background-color: transparent;
+            font-size: 13px;
+            color: #be0014;
+            padding: 8px 2%;
+            float: left;
+
+            border-radius: 20px;
+        }
+        */
+
+       body{
+             background: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+             background-size:cover;
+             // background-image: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+             // background-repeat: no-repeat;
+             // background-attachment: fixed;
+        }
+
+
+
+
+
+    </style>
+
+        <link rel="stylesheet" href="{% static 'bundles/edepot/css/bootstrap/bootstrap.min.css' %}">
+
+                               <link rel="stylesheet" href="{%static 'bundles/edepot/css/stylesheets.css' %}">
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/style.css" />
+        <link rel="stylesheet" href="{% static 'bundles/edepot/css/validationengine/validationEngine.css' %}" />
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.default.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.core.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.bootstrap.css' %}">
+	<link rel="icon" href="{%static 'favicon.png' %}" type="image/png">
+
+
+    <!--<link rel="stylesheet" href="{% static 'bundles/edepot/css/style.css' %}" />-->
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/bootstrap-datepicker3.css' %}">
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/validationengine/validationEngine.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.core.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.default.css' %}">
+    <title>WIRI - Profil </title>
+
+
+
+</head>
+
+<body class="bgr">
+<!--<img src="{ static 'images/logo.png' }">-->
+<img src="{%static 'bundles/edepot/images/white_red_logo.png'%}" class="bg">
+    <form method="post" enctype="multipart/form-data" action="{% url 'profil' %}">{% csrf_token %}
+
+      <div align="center"style="color:white;"> <h2> PROFIL UTILISATEUR</h2> </div>
+
+
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3  col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+                <table align="center" cellspacing="35">
+
+
+                    <center>
+                            <a href="#"><img src="../../media/{{user.photo}}" width="150px"  height="200px" style="margin:0;padding:0;" alt="portfolio slider"></a>
+                    </center>
+
+
+
+                         <tr>
+                             <td style="color:white;font-weight:bold;"> Nom </td>
+                             <td>
+
+                                      <div> {{ formUser2.first_name }}</div><br/>
+
+                                </td>
+
+                         </tr>
+
+
+                         <tr>
+                             <td style="color:white;font-weight:bold;"> Prénom </td>
+
+                             <td>
+                                 <div>{{ formUser2.last_name }}<br></div>
+                             </td>
+                         </tr>
+
+                         <tr>
+                             <td style="color:white;font-weight:bold;"> Email</td>
+                             <td>
+                                 <div>{{ formUser2.email }}<br></div>
+                             </td>
+                         </tr>
+
+
+                         <tr>
+                             <td style="color:white;font-weight:bold;"> Photo</td>
+
+                             <td>
+                                 <div> {{ formUser2.photo }}<br></div>
+                             </td>
+                         </tr>
+
+
+
+                         <tr>
+                             <td style="color:white;font-weight:bold;"> Centre d'intérêts &nbsp;&nbsp;&nbsp;</td>
+                              <td>
+                                  <div> {{ formUser2.interest }}<br></div>
+                              </td>
+                         </tr>
+
+
+
+                        <tr>
+                            <td style="padding-left:1%;padding-top:5%">
+                                  <!--<input type="submit" value="Enregistrer" name="ok"  style="background:#be0014 ; color:white;font-size:180%"/>-->
+                                  <button class="btn btn-default btn-block btn-clean" name="ok" type="submit">  Enregistrer</button>
+                             </td>
+
+                            <td style="padding-top:5%; padding-left:5%;">
+                                  <!--<input type="submit" value="Annuler" name="ok"  style="background:#be0014 ; color:white;font-size:180%"/> -->
+                                  <!--<button type="submit" name="ok1" class="btn btn-default btn-block btn-clean">Annuler </button> -->
+                                  <a href="/dashboard" class="btn btn-default btn-block btn-clean" role="button"> Annuler </a>
+                             </td>
+
+                            <td style="padding-top:5%; padding-left:5%;margin-right:10%">
+                                  <!--<input type="submit" value="Annuler" name="ok"  style="background:#be0014 ; color:white;font-size:180%"/> -->
+                                  <!--<button type="submit" name="ok1" class="btn btn-default btn-block btn-clean">Annuler </button> -->
+                                  <a href="/modify_password" class="btn btn-default btn-block btn-clean" role="button"> Modifier mot de passe </a>
+                             </td>
+
+                         </tr>
+
+
+
+
+
+                         <br/><br/><br/>
+                        </table>
+
+            </div>
+        </div>
+        </div>
+    </form>
+
+
+
+
+</body>
+
+</html>

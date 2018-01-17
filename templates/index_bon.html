@@ -1,0 +1,975 @@
+{%load static%}
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de">  <!--<![endif]-->
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/WIRI/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+<head>
+
+	<!-- META DATA -->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="UTF-8">
+	<title>WIRI - Connexion</title>
+    <meta name="description" content="A Template by RocknRolla Designs"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP"/>
+    <meta name="author" content="RocknRolla Designs"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="{%static 'favicon.ico' %}" type="image/x-icon">
+
+	<link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600" rel="stylesheet" type="text/css">
+
+
+
+	<link rel="stylesheet" href="{%static 'css/skeleton.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/reset.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/style.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/social.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/flexslider.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/prettyPhoto.css' %}" type="text/css" media="screen"/><!-- PrettyPhoto -->
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css' %}" type="text/css"/><!-- PrettyPhoto -->
+	<link rel="stylesheet" href="{%static 'css/shortcodes.css' %}" type="text/css"/>
+	<link rel="stylesheet" href="{%static 'css/media.css' %}"><!-- Media Queries -->
+
+
+ 	<link rel="stylesheet" href="{%static 'files/themes_panel/themes_panel.css' %}"><!-- Theme Panel -->
+
+    <link id="layout_color" href="{%static 'css/light.css' %}" rel="stylesheet" type="text/css"/>
+    <link id="primary_color_scheme" href="{%static 'css/colors/yellow.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style>
+
+
+        .bloc-rond{
+            height: 0px !important;
+        }
+        /* @media only screen and (min-width:590px) */
+
+
+        @media all and (min-width: 480px) and (max-width: 970px){
+            #home {
+                dispay:inline-block;
+                width: 100%;
+                /* float:left; */
+
+
+            }
+
+            .home5, home2 {
+                dispay:inline-block;
+                width: 100%;
+                /* float:left;*/
+                float:left;
+            }
+
+            h6{
+                font-size:10px;
+            }
+
+            h3{
+                font-size:20px;
+            }
+
+            a, span{
+                font-size:50%;
+            }
+
+            .home-slide .home-slide-content{
+                            font-size:35px !important;
+            }
+
+
+
+        }
+
+
+        @media all and (min-width: 380px) and (max-width: 480px){
+
+            #home {
+                dispay:inline-block;
+                width: 100%;
+                /*float:left;*/
+            }
+
+            .home5, home2 {
+                dispay:inline-block;
+                width: 100%;
+                float:left;
+            }
+
+            h6{
+                font-size:10px;
+            }
+
+            .home-slide .home-slide-content{
+                            font-size:25px !important;;
+            }
+
+            h3{
+                font-size:15px;
+            }
+
+            #evenement{
+                font-size: 25px;
+                display: block;
+                text-align: center;
+            }
+
+            #institution{
+                font-size: 25px;
+                display: block;
+                text-align: center;
+            }
+        }
+
+
+        @media all and (min-width: 200px) and (max-width: 480px){
+
+            #home {
+                dispay:inline-block;
+                width: 100%;
+                /*float:left;*/
+            }
+
+            .home5, home2 {
+                dispay:inline-block;
+                width: 100%;
+                float:left;
+            }
+
+            h6{
+                font-size:10px;
+            }
+
+            .home-slide .home-slide-content{
+                            font-size:25px !important;;
+            }
+
+            h3{
+                font-size:15px;
+            }
+
+            #evenement{
+                font-size: 25px;
+                display: block;
+                text-align: center;
+            }
+
+            #institution{
+                font-size: 25px;
+                display: block;
+                text-align: center;
+            }
+
+
+            .bloc-rond{
+                height: 0px !important;
+                font-size:10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body class="onepage" data-spy="scroll" data-target=".navigation">
+ <div id="load"></div>
+
+
+
+
+    <!-- START PAGE WRAP -->
+    <div class="page-wrap">
+
+
+	<!-- START HOME SECTION -->
+	<div id="home" class="home-parallax">
+      <div class="home-text-wrapper">
+
+          <div class="home-logo-text" style="color:white">
+            <!--<a href="#about"><span style="font-size:90%" >Le monde selon </sapn>WIRI</a>-->
+            <a href="#about"><span style="font-size:50%" >Le monde selon </sapn>WIRI</a>
+          </div>
+
+           <div id="home-slider" class="flexslider">
+                <ul class="slides styled-list">
+
+                <li class="home-slide"><p class="home-slide-content">CREEZ <span class="highlight">VOS</span> PAGES</p></li>
+
+                <li class="home-slide"><p class="home-slide-content">Partagez <span class="highlight">VOS</span> EVENEMENTS</p></li>
+
+                <li class="home-slide"><p class="home-slide-content">REJOIGNEZ <span class="highlight">VOS</span> AMIS</p></li>
+
+                </ul>
+           </div><!-- END FLEXSLIDER -->
+        </div><!-- END HOME TEXT WRAPPER -->
+     </div><!-- END HOME SECTION -->
+
+
+
+    <!-- START NAVIGATION -->
+    <nav class="light sticky-nav navigation">
+     <!-- START CONTAINER -->
+      <div class="container clearfix">
+          <div class="four columns">
+              <!-- START LOGO -->
+              <div class="logo large">
+               <a href="#home"><img src="{%static 'images/logo.png' %}" title="logo" alt="Logo"/></a>
+              </div>
+              <!-- END LOGO -->
+          </div><!-- END FOUR COLUMNS -->
+
+
+          <div class="twelve columns">
+              <!-- START NAVIGATION MENU ITEMS -->
+              <ul class="main-menu large nav" id="nav">
+                  <li><a href="#home">Accueil</a></li>
+                  <li><a href="#about">A propos</a></li>
+                  <!--<li><a href="#team">Nous</a></li> -->
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#portfolio">Pages Publiques</a></li>
+                  <li><a href="#contact">Contact</a></li>
+		 <li><a href="/accounts">Connexion</a></li>
+              </ul>
+              <!-- END NAVIGATION MENU ITEMS -->
+          </div><!-- END TWELVE COLUMNS -->
+      </div><!-- END CONTAINER -->
+    </nav>
+    <!-- END NAVIGATION -->
+
+
+	<!-- START ABOUT US SECTION -->
+	<div id="about" class="page">
+
+		<div class="container">
+           <div class="row">
+			<div class="sixteen columns">
+	            <!-- START TITLE -->
+				<div class="title">
+				  <h1>WIRI</h1>
+                  <div class="subtitle">
+		<p>Une application qui réinvente la notion d'<span class="highlight">adresse</span> et de partage de lieu de <span class="highlight"> rendez-vous.</span>
+            Au 21ème siècle les lieux sont des <span class="highlight"> JM_SPOTS </span> et les adresses des <span class="highlight"> JM_TAGS </span> </p>
+                  </div><!-- END SUBTITLE -->
+                </div><!-- END TITLE -->
+			</div><!-- END SIXTEEN COLUMNS -->
+           </div><!-- END ROW -->
+          </div><!-- END CONTAINER -->
+
+
+
+
+<div class="fullwidth grey">
+        <div class="container">
+
+
+         <div class="row">
+                <div class="one-third column">
+                  <div class="service-features">
+                  <div class="img-container">
+                    <img src="{%static 'images/icons/icons/rencontre.png' %}" alt="Service Features">
+                  </div>
+                    <h3>RENCONTRE</h3>
+                   <span style="font-size:17px;text-align: justify;"> Avec l’application WIRI il n’aura jamais été aussi simple de partager un lieu de rencontre ; lancez une requête
+			« Join Me » à vos amis et le tour est joué !</span>
+                  </div>
+                </div><!-- END ONE THIRD COLUMN -->
+
+                <div class="one-third column">
+                  <div class="service-features">
+                  <div class="img-container">
+                    <img src="{%static 'images/icons/icons/Evenement.png' %}" alt="Service Features">
+                  </div>
+
+                    <h3>EVENEMENTS</h3>
+                    <span style="font-size:17px;text-align: justify;"> Les utilisateurs accédent à des pages dédiées à des événements en lien avec leurs centres
+                        d’intérêt et de pouvoir s’y rendre en un clic !</span>
+                  </div>
+
+                </div><!-- END ONE THIRD COLUMNS -->
+
+                <div class="one-third column">
+                  <div class="service-features">
+                  <div class="img-container">
+                    <img src="{%static 'images/icons/icons/office.png' %}" alt="Service Features">
+                  </div>
+                    <h3>INSTITUTIONS</h3>
+                   <span style="font-size:17px;text-align: justify;"> WIRI permet à ses utilisateurs d’accéder aux pages officielles des institutions (privées, publiques,...) et de savoir s’y rendre en un clic !</span>
+                  </div>
+
+                </div><!-- END ONE THIRD COLUMNS -->
+
+
+
+
+            </div><!-- END ROW -->
+		</div><!-- END CONTAINER -->
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="post-media">
+                       <iframe src="http://player.vimeo.com/video/56676680" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid418701"></iframe>
+                   </div>
+
+                </div>
+        </div>
+
+
+
+        <div class="container">
+
+            <div class="row">
+               <div class="sixteen columns">
+                 <h2>Nos Chiffres</h2>
+               </div><!-- END SIXTEEN COLUMNS -->
+
+               <div class="four columns">
+                 <div class="milestone-counter" data-perc="680">
+                   <span class="milestone-count highlight"></span>
+                   <h6 class="milestone-details">Le nombre de téléchargement</h6>
+                 </div>
+               </div><!-- END FOUR COLUMNS -->
+
+               <div class="four columns">
+                 <div class="milestone-counter" data-perc="85">
+                   <span class="milestone-count highlight"></span>
+                   <h6 class="milestone-details">Le nombre de pages événement</h6>
+                 </div>
+               </div><!-- END FOUR COLUMNS -->
+
+               <div class="four columns">
+                 <div class="milestone-counter" data-perc="120">
+                   <span class="milestone-count highlight"></span>
+                   <h6 class="milestone-details">Le nombre de pages institutionnelles</h6>
+                 </div>
+               </div><!-- END FOUR COLUMNS -->
+
+               <div class="four columns">
+                 <div class="milestone-counter" data-perc="22">
+                   <span class="milestone-count highlight"></span>
+                   <h6 class="milestone-details">Le nombre de pays</h6>
+                 </div>
+               </div><!-- END FOUR COLUMNS -->
+           </div><!-- END ROW -->
+		</div><!-- END CONTAINER -->
+
+
+	  </div>
+	  <!-- End ABOUT US SECTION -->
+
+
+	<!-- START PARALLAX SECTION -->
+	<div id="parallax1" class="parallax">
+		<div class="bg1 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
+		<div class="overlay"></div><!-- END PATTERN OVERLAY -->
+		<div class="container clearfix">
+			<div class="parallax-content">
+				<p class="quote"><i class="icon-quote-left"></i>WIRI a tout simplement réinvente la notion d’adresse. Créez vos pages
+et rejoignez le mouvement !<i class="icon-quote-right"></i></p>
+
+			</div><!-- END PARALLAX CONTENT -->
+		</div><!-- END CONTAINER -->
+	</div>
+	<!-- END PARALLAX SECTION -->
+
+
+
+
+
+
+	<!-- START SERVICES SECTION -->
+	<div id="services" class="page">
+
+
+		<div class="container">
+           <div class="row">
+			<div class="sixteen columns">
+	            <!-- START TITLE -->
+				<div class="title">
+				  <h1>Services</h1>
+                  <div class="subtitle">
+			<p>Nous vous proposons d’utiliser nos templates de design pour créer vos pages WIRI qui deviendront ainsi des JM_Spots dans
+				l’application  </p>
+                  </div><!-- END SUBTITLE -->
+                </div><!-- END TITLE -->
+			</div><!-- END SIXTEEN COLUMNS -->
+           </div><!-- END ROW -->
+          </div><!-- END CONTAINER -->
+
+
+        <div align="center">
+                        <div>
+
+                           <div id="home" class="home3">
+                                  <div class="home-text-wrapper home5">
+
+                                       <div class="container clearfix">
+                                          <div class="home-quote">
+                                            <h1>
+                                                <span class="slabtext second-child ttt" id="evenement">Evenement</span>
+                                                            _________<br>
+                                                </h1>
+
+                                                <h6><br>pour promouvoir votre événement</h6>
+                                                 <br>(anniversaire, mariage, forum, gala, etc.) dans l'application WIRI.
+
+                                                  <br>Définissez le statut de l’évènement (public ou privé) <br>Choissez le JM_tag associé au lieu.
+                                                  vos invités vous trouveront<br> en un clic !
+
+                                          </div>
+                                       </div><!-- END CONTAINER -->
+                                  </div><!-- END CS TEXT CONTAINER -->
+
+
+
+
+
+
+                               <div id="home" class="home3">
+                                  <div class="home-text-wrapper home2">
+                                       <div class="container clearfix">
+                                          <div class="home-quote">
+                                            <h1>
+                                                <span class="slabtext second-child ttt" id="institution">Institution</span>
+                                                        _________
+                                            </h1>
+
+                                                  <h6><br>
+                                                 Vous étes un organisme,</h6>
+                                                 <br>WIRI vous permet de transformer chacun de vos sites en JM_Spot.
+                                                 <br>Il vous suffit pour cela de créer votre page officielle;
+                                                 <br>les itinéraires vers vos sites seront désormais accessibles<br> en un clic !
+
+                                          </div>
+                                       </div><!-- END CONTAINER -->
+                                  </div><!-- END CS TEXT CONTAINER -->
+                           </div>
+
+                       </div>
+                              <!-- END HOME SECTION -->
+
+                           <!--<a href="/accounts"> <h3> <span style="border-radius: 30px;border: 2px solid #be0014;"> Accedez à l'espace de creation </span>  </h3></a>-->
+
+                               <div id="home" class="home3 bloc-rond">
+
+                                  <a href="/accounts"> <h3> <span style="border: 2px solid #be0014;"> Accedez à l'espace de création </span>  </h3></a>
+                                    <a href="/accounts"><h3>  <span style="border: 2px solid #be0014;"> Découvrez nos plans de communications </span> </h3></a>
+
+                               </div>
+
+            </div>
+
+
+
+	</div>
+	<!-- END SERVICES SECTION -->
+
+
+	<!-- START PARALLAX SECTION -->
+	<div id="parallax3" class="parallax">
+        <div class="bg3 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
+        <div class="overlay"></div><!-- END PATTERN OVERLAY -->
+        <div class="container clearfix">
+                <div class="parallax-content">
+                <p class="testimonial-icon"><i class="icon-quote-left"></i></p><h3 class="title"><span>Avis utilisateurs</span></h3>
+                <div class="testimonial-slider">
+                      <div class="flexslider">
+                      <ul class="slides styled-list">
+
+                      <li class="testimonial-slide"><p class="client-testimonial">WIRI c’est vraiment un moyen génial pour communiquer sur un événement sans avoir à
+créer un site éphémère !</p><div class="client-info">Boubacar SOW</div></li>
+
+                      <li class="testimonial-slide"><p class="client-testimonial">WIRI c’est vraiment un moyen génial pour communiquer sur un événement sans avoir à
+créer un site éphémère !</p><div class="client-info">Thiame</div></li>
+
+                      <li class="testimonial-slide"><p class="client-testimonial">WIRI c’est vraiment un moyen génial pour communiquer sur un événement sans avoir à
+créer un site éphémère !</p><div class="client-info">El Hadji DIOP</div></li>
+
+                      </ul>
+                      </div>
+              </div>
+
+      </div><!-- END PARALLAX CONTENT -->
+    </div><!-- END CONTAINER -->
+  </div>
+  <!-- END PARALLAX SECTION -->
+
+
+	<!-- START PORTFOLIO SECTION -->
+	<div id="portfolio" class="page">
+
+		<div class="container">
+           <div class="row">
+			<div class="sixteen columns">
+	            <!-- START TITLE -->
+				<div class="title">
+				  <h1> Quelques exemples de pages WIRI</h1>
+                  <!-- END SUBTITLE -->
+                </div><!-- END TITLE -->
+			</div><!-- END SIXTEEN COLUMNS -->
+           </div><!-- END ROW -->
+          </div><!-- END CONTAINER -->
+
+           <!-- START AJAX SECTION -->
+            <div id="ajax-section">
+             <div class="container clearfix">
+
+
+              <!-- START PROJECT NAVIGATION -->
+              <div id="project-navigation">
+                  <ul>
+                      <li id="nextProject"><a href="#"></a></li>
+                      <li id="prevProject"><a href="#"></a></li>
+                   </ul>
+               </div>
+               <!-- END PROJECT NAVIGATION -->
+
+               <!-- START PROJECT CLOSE BUTTON -->
+               <div id="closeProject">
+                    <a href="#loader"><i class="icon-remove"></i></a>
+
+               </div>
+               <!-- START PROJECT CLOSE BUTTON -->
+
+               <!-- START PROJECT LOADER SECTION -->
+               <div id="loader"></div>
+               <!-- END PROJECT CLOSE BUTTON -->
+
+               <!-- START AJAX CONTENT -->
+               <div id="ajax-content-outer">
+                    <div id="ajax-content-inner"></div>
+               </div>
+               <!-- END AJAX CONTENT -->
+
+        </div><!-- END CONTAINER -->
+
+    </div>
+           <!-- END AJAX SECTION -->
+
+         <div class="clear"></div>
+
+
+
+   <div class="container clearfix">
+
+   <!-- START PORTFOLIO FILTERING -->
+   <div  id="filters" class="sixteen columns">
+
+      <ul class="clearfix">
+        <li><a href="#" data-filter="*" class="active"><h3>Entreprises</h3></a></li>
+        <li><a href="#" data-filter=".branding"><h3>Hotels</h3></a></li>
+        <li><a href="#" data-filter=".design"><h3>Restaurants</h3></a></li>
+        <li><a href="#" data-filter=".photography"><h3>Concerts</h3></a></li>
+        <li><a href="#" data-filter=".videography"><h3>Mariages</h3></a></li>
+        <li><a href="#" data-filter=".web"><h3>Autres</h3></a></li>
+      </ul>
+    </div><!-- END PORTFOLIO FILTERING -->
+   </div><!-- END CONTAINER -->
+
+
+   <!-- START PORTFOLIO WRAP -->
+   <div id="portfolio-wrap">
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column design videography photography web branding">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/01.jpg' %}" alt="Portfolio 1"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column branding videography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/02.jpg' %}" alt="Portfolio 2"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column branding  web ">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/03.jpg' %}" alt="Portfolio 3"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  photography web ">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/04.jpg' %}" alt="Portfolio 4"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column branding videography">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/05.jpg' %}" alt="Portfolio 5"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column videography ">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/06.jpg' %}" alt="Portfolio 6"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding design videography photography">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/07.jpg' %}" alt="Portfolio 7"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+     <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding design ">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/08.jpg' %}" alt="Portfolio 8"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+     <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding design videography photography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/10.jpg' %}" alt="Portfolio 9"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+     <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  photography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/15.jpg' %}" alt="Portfolio 10"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/11.jpg' %}" alt="Portfolio 11"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+    <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  design videography photography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/12.jpg' %}" alt="Portfolio 12"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+     <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding design videography photography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/13.jpg' %}" alt="Portfolio 13"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+     <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding design videography photography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image' %}">
+                <img src="{%static 'images/portfolio/wiri_image/14.jpg' %}" alt="Portfolio 14"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+     <!-- START PORTFOLIO ITEM -->
+    <div class="portfolio-item one-third column  branding design videography photography web">
+           <div class="portfolio" style="border: 1px solid white;">
+              <a href="#!" class="portfolio-image">
+                <img src="{%static 'images/portfolio/wiri_image/09.jpg' %}" alt="Portfolio 15"/><!-- END PORTFOLIO IMAGE -->
+
+              </a>
+           </div>
+    </div>
+    <!-- END PORTFOLIO ITEM -->
+
+
+   </div>
+   <!-- END PORTFOLIO WRAPPER -->
+
+	</div>
+        <br>
+	<!-- END PORTFOLIO SECTION -->
+
+
+
+
+	<!-- START PARALLAX SECTION -->
+	<div id="parallax4" class="parallax">
+        <div class="bg4 parallax-bg"></div><!-- END PARALLAX BACKGROUND -->
+        <div class="overlay"></div><!-- END PATTERN OVERLAY -->
+        <div class="container clearfix">
+                <div class="parallax-content">
+         <!-- START CONTACT DETAILS -->
+         <div class="contact-details">
+           <h2>support@WIRI.com</h2>
+           <h1>+336 42 23 90 80</h1>
+           <h2>91 Rue du faubourg Saint-Honoré, 75008, PARIS</h2>
+        </div>
+	    <!-- END CONTACT DETAILS -->
+                </div><!-- END PARALLAX CONTENT -->
+            </div><!-- END CONTAINER -->
+     </div>
+    <!-- END PARALLAX SECTION -->
+
+	<!-- START CONTACT SECTION -->
+	<div id="contact" class="page">
+
+		<div class="container">
+           <div class="row">
+			<div class="sixteen columns">
+	            <!-- START TITLE -->
+				<div class="title">
+				  <h1>Contactez nous</h1>
+                  <div class="subtitle">
+                     <!-- <p>We'd really love to <span class="highlight">hear from you</span> so why not drop us an email and <span class="highlight">we'll get back</span> to you as soon as we can.</p> -->
+                  </div><!-- END SUBTITLE -->
+                </div><!-- END TITLE -->
+			</div><!-- END SIXTEEN COLUMNS -->
+           </div><!-- END ROW -->
+          </div><!-- END CONTAINER -->
+		<div class="container clearfix">
+			<div class="sixteen columns">
+
+	   <!-- START CONTACT BOX -->
+      <div class="contact-box">
+        <!-- START CONTACT FORM -->
+         <div id="contact-form">
+
+            <!--<form action="{ url 'notification.views.contacter_wiri' %}" method="post">{% csrf_token %}-->
+            <form method="post" role="form" action="{% url 'contacter_wiri' %}">{% csrf_token %}
+
+                <div id="contact-input">
+                 <!--[if IE]>
+                    <label for="name">Name</label>
+                <![endif]-->
+                  <input type="text" name="nom_contact" id="name" placeholder="Nom " required >
+                   <!--[if IE]>
+                   		<label for="email">Email</label>
+                    <![endif]-->
+                  <input type="email" name="email" id="email" placeholder="Email " required>
+                   <!--[if IE]>
+                   		<label for="subject">Subject</label>
+                    <![endif]-->
+                  <input type="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" name="sujet" id="subject" placeholder="Téléphone" required>
+                </div>
+                <div id="contact-textarea">
+                 <!--[if IE]>
+                   		<label for="message">Your Message Here</label>
+                    <![endif]-->
+                  <textarea name="message" id="message" cols="39" rows="4" placeholder="Votre Message"></textarea>
+                </div>
+                <div id="contact-submit">
+                  <div>
+                    <input name="submit" type="submit" id="submit" tabindex="5" value="Post Comment" class="comment-submit small button">
+                  </div>
+                </div>
+              </form>
+         <div class="clear"></div>
+             <div style="color:red;"> {{sucess}}</div>
+          </div>
+           <div class="result"></div>
+		<!-- END CONTACT FORM -->
+
+
+		</div>
+
+        <!-- END CONTACT BOX -->
+		</div> <!-- END SIXTEEN COLUMNS -->
+	</div><!-- END CONTAINER -->
+
+      <!-- START COPYRIGHT SECTION -->
+       <div class="copyright">
+     <div class="container clearfix">
+        <div class="sixteen columns">
+        <!--<div class="copyright-logo"><a href="#"><img src="{ static 'images/logo2.png' %}" title="logo" alt="logo"/></a></div>-->
+           <div class="copyright-logo"><a href="#"><img src="{% static 'images/logo2.png' %}" title="logo" alt="logo"/></a></div>
+
+            <div class="social-icons">
+              <div class="social-icon social-email"><a href="mailto:contact@wiri.com" target="_blank" data-original-title="Email">Email</a></div>
+              <div class="social-icon social-facebook"><a href="" target="_blank" data-original-title="Facebook">Facebook</a></div>
+              <div class="social-icon social-twitter"><a href="" target="_blank" data-original-title="Twitter">Twitter</a></div>
+              <div class="social-icon social-linkedin"><a href="" target="_blank" data-original-title="Linkedin">Linkedin</a></div>
+              <div class="social-icon social-googleplus"><a href="" target="_blank" data-original-title="Googleplus">Googleplus</a></div>
+              <div class="social-icon social-youtube"><a href="" target="_blank" data-original-title="Youtube">Youtube</a></div>
+              <div class="social-icon social-instagram"><a href="" target="_blank" data-original-title="Instagram">Instagram</a></div>
+           </div>
+			<!--<p>&copy; 2016 All Rights Reserved. Made with <i class="icon-heart"></i> by <a href="http://themeforest.net/user/RockNRollaDesigns">QUALSHORE</a></p>-->
+            <center><p style="color:white;"> &copy; 2017 All Rights Reserved. By <a href="http://www.qualshore.com/fr/fr/accueil-2/">QUALSHORE</a></p></center>
+
+         </div> <!-- END SIXTEEN COLUMNS -->
+	  </div><!-- END CONTAINER -->
+
+
+
+     </div>
+     <!-- END COPYRIGHT SECTION -->
+
+
+
+	</div>
+    <!-- END CONTACT SECTION -->
+
+
+   </div><!-- END PAGE WRAP -->
+
+        <div id="back-to-top">
+           <a href="#">Back to Top</a>
+       </div>
+
+
+
+
+      <!-- BEGIN THEME PANEL -->
+	<!--<div id="themes_panel">-->
+		<!--<div id="themes_menu">-->
+        <!--<h4 style="text-align:center;">Style Switcher</h4>-->
+
+			<!--<div class="segment">-->
+            <!--<h5>Layout Type</h5>-->
+				<!--<ul class="theme cookie_layout_style">-->
+                    <!--<li><a href="#" title="parallax" class="panel_btn">Parallax Version</a></li>-->
+                    <!--<li><a href="#" title="color-block" class="panel_btn">Colored Version</a></li>-->
+                  <!--</ul>-->
+			<!--</div>-->
+			<!--<div class="segment">-->
+            <!--<h5>Layout Color</h5>-->
+				<!--<ul class="theme cookie_layout_color">-->
+					<!--<li><a href="#" title="light" style="background: white; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="dark" style="background: black; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+			<!--</div>-->
+
+			<!--<div class="segment">-->
+            <!--<h5>Menu Style</h5>-->
+				<!--<ul class="theme cookie_menu_style">-->
+                    <!--<li><a href="#" title="large" class="panel_btn">Large Menu</a></li>-->
+                    <!--<li><a href="#" title="small" class="panel_btn">Small Menu</a></li>-->
+                  <!--</ul>-->
+			<!--</div>-->
+
+			<!--<div class="segment">-->
+            <!--<h5>Menu Color</h5>-->
+				<!--<ul class="theme cookie_menu_color">-->
+					<!--<li><a href="#" title="light" style="background: white; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="dark" style="background: black; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+			<!--</div>-->
+
+			<!--<div class="segment">-->
+        <!--<h5>Color Skins</h5>-->
+				<!--<ul class="theme cookie_colors">-->
+                    <!--<li><a href="#" title="blue" style="background: steelblue; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="mediumaquamarine" style="background: mediumaquamarine; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="tomato" style="background: tomato; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="yellow" style="background: #FFD600; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="green" style="background: #a0ce4e; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="darksalmon" style="background: darksalmon; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+			<!--</div>-->
+
+
+
+			<!--<div class="segment noborder">-->
+				<!--<a class="reset" href="#">Click to Reset</a>-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--&lt;!&ndash;<div id="toggle_button"><a href="#"></a></div> &ndash;&gt;-->
+	<!--</div>-->
+<!-- END THEME PANEL -->
+
+	<!-- WIRI THEME SCRIPTS -->
+    <script type="text/javascript" src="{%static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.tweet.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.queryloader2.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.fitvids.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.slabtext.min.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.fittext.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.easing.min.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.parallax-1.1.3.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.prettyPhoto.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.sticky.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/selectnav.min.js' %}"></script>
+            <!--<script type="text/javascript" src="{%static 'js/SmoothScroll.js' %}"></script>-->
+
+    <script type="text/javascript" src="{%static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/isotope.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/bootstrap-modal.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/shortcodes.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/scripts.js' %}"></script>
+    <!-- Themes Panel -->
+    <script src="{%static 'files/themes_panel/themes_panel.js' %}"></script>
+    <!-- /Themes Panel -->
+
+</body>
+
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/WIRI/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+</html>

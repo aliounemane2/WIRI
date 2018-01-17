@@ -1,0 +1,508 @@
+{%load static%}
+
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de">  <!--<![endif]-->
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:10 GMT -->
+<html>
+<head>
+
+	<!-- META DATA -->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="UTF-8">
+	<title>WIRI - Institution</title>
+    <meta name="description" content="A Template by RocknRolla Designs"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP"/>
+    <meta name="author" content="RocknRolla Designs"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- GOOGLE WEB FONTS INCLUDE -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	
+	<!-- JARVIS THEME STYLESHEETS -->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.map"></script>-->
+
+
+
+
+       <!--<link rel="stylesheet" href="{ static 'mane/css/bootstrap-datetimepicker.css' %}">-->
+       <!--<script type="text/javascript" src="{static 'mane/js/bootstrap-datetimepicker.js' %}"></script>-->
+       <!--<script type="text/javascript" src="{static 'mane/js/jquery-1.7.1.min.js' %}"></script>-->
+
+
+    <script type="text/javascript" src="{% static '/js/jquery.min.js' %}"></script>
+     {% load i18n admin_modify %}
+
+    <script type="text/javascript" src="{% static '/admin/js/jquery.init.js' %}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/admin/css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/admin/css/forms.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/admin/css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/admin/css/widgets.css' %}">
+
+
+
+    <script type="text/javascript" src="{% static '/admin/js/core.js' %}"></script>
+    <script type="text/javascript" src="{% static '/admin/js/SelectFilter2.js' %}"></script>
+    <script type="text/javascript" src="{% static '/admin/js/admin/RelatedObjectLookups.js' %}"></script>
+    <script type="text/javascript" src="{% static '/admin/js/actions.js' %}"></script>
+    <!--<script type="text/javascript" src="{ static '/admin/js/calendar.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{ static '/admin/js/admin/DateTimeShortcuts.js' %}"></script>-->
+
+
+
+    <!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>-->
+
+
+    <script type="text/javascript" src="{% static '/mane/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+
+    <script type="text/javascript">
+      var d = new Date("2015-03-25");
+      // alert (d)
+
+      function charger(){
+
+      console.log(' Debut commentaire ');
+        x = document.getElementById("id_date_begin").value;
+        console.log(x)
+
+        console.log(' Avec Conversion T ');
+        x1 = x.replace('T', ' ');
+        console.log(x1);
+
+         x2 = document.getElementById("id_date_end").value;
+
+        console.log(x2)
+
+        console.log(' Avec Conversion T ');
+        x3 = x2.replace('T', ' ');
+        console.log(x3);
+
+      }
+    </script>
+
+
+
+
+
+    <!--<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" type="text/css"/>-->
+    <!--<script src="{{ STATIC_URL }}js/bootstrap.js"></script>-->
+     
+	<link rel="stylesheet" href="{% static 'css/skeleton.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/reset.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/style.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/social.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/flexslider.css' %}" type="text/css">
+	<link rel="stylesheet" href="{%static 'css/prettyPhoto.css' %}" type="text/css" media="screen"/><!-- PrettyPhoto -->
+	<link rel="stylesheet" href="{%static 'css/font-awesome.css' %}" type="text/css"/><!-- PrettyPhoto -->
+	<link rel="stylesheet" href="{%static 'css/shortcodes.css' %}" type="text/css"/>
+	<link rel="stylesheet" href="{%static 'css/media.css' %}">
+
+    <!-- Media Queries -->
+
+         
+    
+   
+ 	<link rel="stylesheet" href="{%static 'files/themes_panel/themes_panel.css' %}"><!-- Theme Panel -->      
+    
+    <link id="layout_color" href="{%static 'css/light.css' %}" rel="stylesheet" type="text/css"/> 
+     
+    <link id="primary_color_scheme" href="{%static 'css/colors/yellow.css' %}" rel="stylesheet" type="text/css"/>
+
+       
+    <!--[if lt IE 9]>    <![endif]-->
+
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+        <link href="{% static 'mane/bootstrap-datetimepicker.min.css' %}" rel="stylesheet" media="screen">
+    <!-- Media Queries -->
+
+    <link href="{%static 'bundles/edepot/css/fullcalendar/fullcalendar.css' %}" rel="stylesheet" media="screen">
+    <link href="{%static 'bundles/edepot/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+
+
+    <!--<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>-->
+    <!--GOOD <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD2R04WpsIXRt1q362wAHKhCW8uLi8ByNQ"></script>
+    <script type="text/javascript">
+
+    var locations = [
+      ["SENEGAL", 14.721760679027714, -17.3858642578125, 4],
+      ["Tanglin", 1.29559, 103.825607, 3],
+      ["Orchard Turn", 1.30431, 103.831905, 2],
+      ["Cityhall", 1.29308, 103.852226, 1],
+      ];
+
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+            showMap(position.coords.latitude, position.coords.longitude);
+        });
+
+    }
+    else {
+    }
+
+    function showMap(geolat, geolng) {
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: new google.maps.LatLng(geolat, geolng),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+            maxWidth: 200
+        });
+
+        var marker, i;
+          marker = new google.maps.Marker({
+            animation: google.maps.Animation.DROP,
+            position: new google.maps.LatLng(geolat, geolng),
+            map: map,
+            draggable: true
+          });
+
+          marker.addListener('dragend', function(e) {
+
+          console.log(marker.getPosition().lat()+' * '+ marker.getPosition().lng());
+          var latitude = document.getElementById('id_latitude').value = marker.getPosition().lat();
+          var longitude = document.getElementById('id_longitude').value = marker.getPosition().lng();
+
+          });
+
+          // google.maps.event.addListener(marker, 'click', (function(marker, i) {
+
+          google.maps.event.addListener(marker, 'dragend', (function(marker) {
+
+          //alert(marker.getPosition().lat()+' * '+ marker.getPosition().lng());
+            // var latitude = document.getElementById('id_latitude') = marker.getPosition().lat();
+            // var longitude = document.getElementById('id_longitude') = marker.getPosition().lng();
+
+            /*
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+            */
+
+          // })(marker, i));
+          })(marker));
+
+        }
+    // }
+
+    </script>
+    <script>
+
+    function getFormattedDate(){
+    var d = new Date();
+    d = d.getFullYear() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" + ('0' + d.getDate()).slice(-2) + " " + ('0' + d.getHours()).slice(-2) + ":" + ('0' + d.getMinutes()).slice(-2) + ":" + ('0' + d.getSeconds()).slice(-2);
+    return d;
+    }
+    </script>
+
+
+    <script type="text/javascript">
+
+      $(function() {
+        $('#id_date_end').datetimepicker({
+          pickTime: false
+        });
+      });
+</script>
+
+    
+</head>
+
+<body class="multipage">
+
+    <!-- START NAVIGATION -->
+    <nav class="light sticky-nav navigation">
+     <!-- START CONTAINER -->	
+      <div class="container clearfix">			
+          <div class="four columns">			
+              <!-- START LOGO -->	
+              <div class="logo large">
+               <a href="/"><img src="{%static 'images/logo.png' %}" title="logo" alt="Logo"/></a>
+              </div>
+              <!-- END LOGO -->			
+          </div><!-- END FOUR COLUMNS -->   
+          
+                   
+          <div class="twelve columns">            		
+              <!-- START NAVIGATION MENU ITEMS -->
+              <ul class="main-menu large nav" id="nav">
+                  <li><a href="/dashboard">{{ request.session.first_name }} {{ request.session.last_name }}</a></li>
+                  <li><a href="/accounts/profil">Profil</a></li>
+                  <li><a href="/accounts/logout_account/">Deconnexion</a></li>
+                 
+              </ul>
+              <!-- END NAVIGATION MENU ITEMS -->				
+          </div><!-- END TWELVE COLUMNS -->	
+      </div><!-- END CONTAINER -->	
+    </nav>
+    <!-- END NAVIGATION -->
+
+
+    <!-- START PAGE WRAP -->    
+    <div id="blog-single" class="page-wrap">
+    
+    	<!-- START PROJECT-SINGLE -->	
+	    <div class="page multipage">
+	
+		<div class="container">	
+           <div class="row">	
+			<div class="sixteen columns">            
+	            <!-- START TITLE -->	            	
+				<div class="title">
+				  <h2 style="color:white;background-color:red;">Creation D'une Institution	</h2>
+                </div><!-- END TITLE -->                        
+			</div><!-- END SIXTEEN COLUMNS -->  
+           </div><!-- END ROW -->         
+          </div><!-- END CONTAINER -->
+
+
+            <div id="map" style="width:500px; height:300px; float:right;"></div>
+
+          
+	
+		<div class="container">
+		
+			<div class="twelve columns">
+				
+				
+				
+				<div class="post">
+                   <div class="post-media">                   
+
+                   					
+					<div class="post-content">
+
+			<form method="post" enctype="multipart/form-data" action=".">
+			{% csrf_token %}
+
+            <h3 style="color:red;"> Spot </h3>
+
+			{{ spotform.as_p     }}
+            <h3 style="color:red;"> Institution </h3>
+			{{ forminstitution.as_p     }}
+
+            <h3 style="color:red;"> Card </h3>
+			{{ form.as_p     }}
+			<input type="submit" value="Enregistrer" style="background:#be0014 ; color:white;font-size:200%" onclick="charger();"/>
+            <!--<button class="btn btn-danger" name="ok" type="submit"> <span class="glyphicon glyphicon-ok"></span> &nbsp; Enregistrer</button>-->
+
+            </form>
+			</p>
+              </div>
+				</div>
+
+   
+			</div> 
+			
+			<div class="four columns">
+			
+				<div class="sidebar">
+					
+					<div class="widget">
+            
+                      <div id="twitter-widget" class="twitter"></div>
+                    </div>
+				
+					
+					
+				</div>
+				
+			</div>
+						
+		</div>
+		
+        
+          
+          <div class="clear"></div>
+        </div>
+            
+       <!-- START COPYRIGHT SECTION -->   	
+       <div class="copyright clearfix">
+     <div class="container clearfix">
+        <div class="sixteen columns">   
+        <div class="copyright-logo"><a href="#"><img src="{%static 'images/logo2.png' %}" title="logo" alt="logo"/></a></div>   
+           <div class="social-icons">
+              <div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>
+              <div class="social-icon social-aim"><a href="#" target="_blank" data-original-title="Aim">Aim</a></div>
+              <div class="social-icon social-apple"><a href="http://apple.com/" target="_blank" data-original-title="Apple">Apple</a></div>
+              <div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>
+              <div class="social-icon social-blogger"><a href="#" target="_blank" data-original-title="Blogger">Blogger</a></div>
+              <div class="social-icon social-delicious"><a href="#" target="_blank" data-original-title="Delicious">Delicious</a></div>
+              <div class="social-icon social-deviantart"><a href="#" target="_blank" data-original-title="Deviantart">Deviantart</a></div>
+              <div class="social-icon social-digg"><a href="#" target="_blank" data-original-title="Digg">Digg</a></div>
+              <div class="social-icon social-dribbble"><a href="#" target="_blank" data-original-title="Dribbble">Dribbble</a></div>
+              <div class="social-icon social-ember"><a href="#" target="_blank" data-original-title="Ember">Ember</a></div>
+              <div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>
+              <div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>
+              <div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>
+           </div><!-- END COPYRIGHT SECTION -->
+			<p>&copy; 2012 All Rights Reserved. Designed by <a href="http://themeforest.net/user/RockNRollaDesigns">RockNRolla Designs</a></p>
+            
+         </div> <!-- END SIXTEEN COLUMNS -->        
+	  </div><!-- END CONTAINER -->
+     </div>
+     <!-- END COPYRIGHT SECTION -->           
+         
+      </div>
+      <!-- END PAGE -->
+      <div id="back-to-top"><a href="#">Back to Top</a></div>
+      
+      
+      <!-- BEGIN THEME PANEL -->
+	<!--<div id="themes_panel">-->
+		<!--<div id="themes_menu">-->
+        <!--<h4 style="text-align:center;">Style Switcher</h4>-->
+        <!---->
+			<!--<div class="segment">-->
+            <!--<h5>Layout Type</h5>-->
+				<!--<ul class="theme cookie_layout_style">-->
+                    <!--<li><a href="#" title="parallax" class="panel_btn">Parallax Version</a></li>                   -->
+                    <!--<li><a href="#" title="color-block" class="panel_btn">Colored Version</a></li>                -->
+                  <!--</ul>-->
+			<!--</div>         -->
+			<!--<div class="segment">-->
+            <!--<h5>Layout Color</h5>-->
+				<!--<ul class="theme cookie_layout_color">                            -->
+					<!--<li><a href="#" title="light" style="background: white; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="dark" style="background: black; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+			<!--</div>   -->
+
+			<!--<div class="segment">-->
+            <!--<h5>Menu Style</h5>-->
+				<!--<ul class="theme cookie_menu_style">                            -->
+                    <!--<li><a href="#" title="large" class="panel_btn">Large Menu</a></li>                   -->
+                    <!--<li><a href="#" title="small" class="panel_btn">Small Menu</a></li> -->
+                  <!--</ul>-->
+			<!--</div> -->
+            <!---->
+			<!--<div class="segment">-->
+            <!--<h5>Menu Color</h5>-->
+				<!--<ul class="theme cookie_menu_color">                            -->
+					<!--<li><a href="#" title="light" style="background: white; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="dark" style="background: black; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+			<!--</div>                  -->
+
+			<!--<div class="segment">-->
+        <!--<h5>Color Skins</h5>-->
+				<!--<ul class="theme cookie_colors">           -->
+                    <!--<li><a href="#" title="blue" style="background: steelblue; width: 30px; height: 15px;"></a></li> -->
+                    <!--<li><a href="#" title="mediumaquamarine" style="background: mediumaquamarine; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="tomato" style="background: tomato; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="yellow" style="background: #FFD600; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="green" style="background: #a0ce4e; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="darksalmon" style="background: darksalmon; width: 30px; height: 15px;"></a></li>                                  -->
+                  <!--</ul>-->
+			<!--</div>   -->
+            <!---->
+      <!---->
+                              <!---->
+			<!--<div class="segment noborder">-->
+				<!--<a class="reset" href="#">Click to Reset</a>-->
+			<!--</div>-->
+		<!--</div>-->
+		<!--<div id="toggle_button"><a href="#"></a></div>-->
+	<!--</div>-->
+
+
+
+<!-- END THEME PANEL -->       
+
+	<!-- JARVIS THEME SCRIPTS -->
+        <!--<script type="text/javascript" src="{%static 'js/jquery.min.js' %}"></script>-->
+        <!--<script-->
+  <!--src="https://code.jquery.com/jquery-2.2.4.min.js"-->
+  <!--integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="-->
+  <!--crossorigin="anonymous"></script>-->
+
+    <script type="text/javascript" src="{%static 'js/jquery.tweet.js' %}"></script>         
+    <script type="text/javascript" src="{%static 'js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{%static 'js/jquery.queryloader2.js' %}"></script>        
+    <script type="text/javascript" src="{%static 'js/modernizr-2.6.2.min.js' %}"></script>  
+    <script type="text/javascript" src="{%static 'js/jquery.fitvids.js' %}"></script>  
+    <script type="text/javascript" src="{%static 'js/jquery.appear.js' %}"></script>  
+    <script type="text/javascript" src="{%static 'js/jquery.slabtext.min.js' %}"></script>   
+    <script type="text/javascript" src="{%static 'js/jquery.fittext.js' %}"></script>   
+	<script type="text/javascript" src="{%static 'js/jquery.easing.min.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.parallax-1.1.3.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.prettyPhoto.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/jquery.sticky.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/selectnav.min.js' %}"></script>    
+    <script type="text/javascript" src="{%static 'js/SmoothScroll.js' %}"></script>   
+    <script type="text/javascript" src="{%static 'js/jquery.flexslider-min.js' %}"></script>   
+    <script type="text/javascript" src="{%static 'js/shortcodes.js' %}"></script>    
+    <script type="text/javascript" src="{%static 'js/isotope.js' %}"></script>     
+	<script type="text/javascript" src="{%static 'js/scripts.js' %}"></script>
+
+    <!-- Themes Panel -->
+    <script src="{%static 'files/themes_panel/themes_panel.js' %}"></script>
+        <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+         <!--Bonne good <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.5&sensor=false"> </script>-->
+
+<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language=fr"></script>-->
+        <!--<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD2R04WpsIXRt1q362wAHKhCW8uLi8ByNQ"></script>-->
+
+    <!-- /Themes Panel -->
+
+
+
+  <script type="text/javascript" src="{% static  'mane/jquery/jquery-1.8.3.min.js' %}"></script>
+  <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap-datetimepicker.js' %}"></script>
+  <script type="text/javascript" src="{% static  'mane/bootstrap/js/locales/bootstrap-datetimepicker.fr.js' %}"></script>
+  <script type="text/javascript">
+
+       	$('#id_date_begin').datetimepicker({
+       	        language:  'fr',
+       	        weekStart: 1,
+       	        format: "yyyy-mm-dd hh:ii:ss",
+                 todayBtn:  1,
+		            autoclose: 1,
+		            todayHighlight: 1,
+		            startView: 2,
+		            minView: 2,
+		            forceParse: 0
+         });
+
+         $('#id_date_end').datetimepicker({
+                   	        language:  'fr',
+                             weekStart: 1,
+                             format: "yyyy-mm-dd hh:ii:ss",
+                             todayBtn:  1,
+                             autoclose: 1,
+                   		    todayHighlight: 1,
+                 		    startView: 2,
+     		                minView: 2,
+     		                forceParse: 0
+                });
+
+  </script>
+
+ <!-- /Themes Panel -->
+
+
+
+
+  	
+</body>
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:10 GMT -->
+</html>

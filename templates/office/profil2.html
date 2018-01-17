@@ -1,0 +1,170 @@
+{%  load static %}
+<html>
+<head>
+    <style>
+        .bgr{
+             // background-image: url("{% static 'images/parallax/parallax4.jpg' %}");
+             //background-image: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+             //background-repeat: no-repeat;
+             // background-attachment: fixed;
+             // left top repeat-x #082648
+        }
+
+body {
+    // display: block;
+    // margin: 8px;
+    // background-image: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+}
+        /*
+        input {
+            border: 1px solid #e8e8e8;
+            background-color: transparent;
+            font-size: 13px;
+            color: #be0014;
+            padding: 8px 2%;
+            float: left;
+
+            border-radius: 20px;
+        }
+        */
+
+       body{
+             background: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+             background-size:cover;
+             // background-image: url("{% static 'bundles/edepot/images/splash_wiri.png' %}");
+             // background-repeat: no-repeat;
+             // background-attachment: fixed;
+        }
+
+
+
+
+
+    </style>
+
+        <link rel="stylesheet" href="{% static 'bundles/edepot/css/bootstrap/bootstrap.min.css' %}">
+
+                               <link rel="stylesheet" href="{%static 'bundles/edepot/css/stylesheets.css' %}">
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/style.css" />
+        <link rel="stylesheet" href="{% static 'bundles/edepot/css/validationengine/validationEngine.css' %}" />
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.default.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.core.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.bootstrap.css' %}">
+	<link rel="icon" href="{%static 'favicon.png' %}" type="image/png">
+
+
+    <!--<link rel="stylesheet" href="{% static 'bundles/edepot/css/style.css' %}" />-->
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/bootstrap-datepicker3.css' %}">
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/validationengine/validationEngine.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.core.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.default.css' %}">
+    <title>WIRI - Profil </title>
+    
+
+
+</head>
+
+<body class="bgr">
+<!--<img src="{ static 'images/logo.png' }">-->
+<img src="{%static 'bundles/edepot/images/white_red_logo.png'%}" class="bg">
+    <form method="post" enctype="multipart/form-data" action="{% url 'modify_password2' %}">{% csrf_token %}
+
+      <div align="center" style="color:white;"> <h2> MODIFIER MOT DE PASSE </h2> </div>
+        <br/>
+        <br/>
+
+
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3  col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                <h3 style="color:white;"> {{message}}</h3>
+                <table align="center" cellspacing="35">
+
+
+                            <tr>
+                                     <div class="col-lg-6 col-lg-offset-3  col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                                         <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <span class="icon-key"></span>
+                                            </div>
+                                            <input type="text" id="username" name="password1" value="" required="required" placeholder="Ancien mot de passe" class="form-control" minlength="8"/>
+                                         </div>
+                                     </div>
+                                 <br/>
+                                 <br/>
+                                 <br/>
+                             </tr>
+
+
+
+                            <tr>
+                                     <div class="col-lg-6 col-lg-offset-3  col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                                         <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <span class="icon-key"></span>
+                                            </div>
+                                            <input type="password" id="username" name="password2" value="" required="required" placeholder="Nouveau mot de passe" class="form-control" minlength="8"/>
+                                         </div>
+                                     </div>
+                                <br/>
+                                <br/>
+                                <br/>
+                             </tr>
+
+
+
+
+                            <tr>
+                                     <div class="col-lg-6 col-lg-offset-3  col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                                         <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <span class="icon-key"></span>
+                                            </div>
+                                            <input type="password" id="username" name="password3" value="" required="required" placeholder="Confirmer nouveau mot de passe" class="form-control" minlength="8"/>
+                                         </div>
+                                     </div>
+                                 <br/>
+                             </tr>
+
+
+
+
+
+                        <tr>
+                            <td style="padding-left:1%;padding-top:5%">
+                                  <!--<input type="submit" value="Enregistrer" name="ok"  style="background:#be0014 ; color:white;font-size:180%"/>-->
+                                  <button class="btn btn-default btn-block btn-clean" name="ok" type="submit">  Enregistrer</button>
+                             </td>
+
+                            <td style="padding-top:5%; padding-left:5%;">
+                                  <!--<input type="submit" value="Annuler" name="ok"  style="background:#be0014 ; color:white;font-size:180%"/> -->
+                                  <!--<button type="submit" name="ok1" class="btn btn-default btn-block btn-clean">Annuler </button> -->
+                                  <a href="/dashboard" class="btn btn-default btn-block btn-clean" role="button"> Annuler </a>
+                             </td>
+                         </tr>
+
+
+
+
+
+                         <br/><br/><br/>
+                        </table>
+
+            </div>
+        </div>
+        </div>
+    </form>
+
+
+
+
+</body>
+
+</html>

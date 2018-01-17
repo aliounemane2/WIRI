@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    
+<!-- Mirrored from 213.246.59.111/allmedias07/web/web/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 May 2016 13:06:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="UTF-8" />
+        <title> WIRI Login - Register </title>
+                            <link rel="stylesheet" href="{%static 'bundles/edepot/css/stylesheets.css' %}">
+        
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/style.css" />
+        <link rel="stylesheet" href="{% static 'bundles/edepot/css/validationengine/validationEngine.css' %}" />
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.default.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.core.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.bootstrap.css' %}">
+    
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/style.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/bootstrap-datepicker3.css' %}">
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/validationengine/validationEngine.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.core.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bundles/edepot/css/alertify/alertify.default.css' %}">
+
+        <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+        </style>
+        <link rel="icon" href="{%static 'favicon.png' %}" type="image/png">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+    <style>
+        @media all and (min-width: 200px) and (max-width: 790px){
+
+            #image_logo{
+
+                margin-left: 60px;
+            }
+        }
+
+    </style>
+        
+    </head>
+    <body class="    background-connexion theme-black
+">
+        
+    
+<div class="container background-boy">
+
+    <div class="login-block">
+        <div class="block block-transparent">
+
+            <div class="content controls npt">
+
+                <div>
+           <br><center>    <h2 style="color:black">{{ error }}</h2> </center> <br>
+
+
+    <div class="col-md-6 col-md-offset-3">
+        <div class="head" style="width:100px;margin:auto;margin-bottom:10px;">
+            <div class="user">
+                <div class="info user-change">
+                    <div class="block" style="margin: auto; width: 100px;float: none;">
+                        <div class="head"
+                             
+                            <div class="head-panel nm" id="image_logo" style="width:100px;height:100px;">
+
+                                
+                                    <img src="{%static 'bundles/edepot/images/white_red_logo.png'%}" width="75px;"  margin-bootom="10px" id="image-recieve-register">
+                                <span style="display: block; width: 100%;position: absolute;bottom: 10px;
+                                        background: rgba(0,0,0,0.5);text-align: center;">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <form    action="{% url 'signup_account' %}" method="post"> {% csrf_token %}
+
+        
+        <div class="content controls npt">
+
+            
+            <input type="hidden" name="_csrf_token" value="wXss_1B5_KJQoDH6guncBeMbpCveq_JcnmCrxlgkUsc" />
+            <h3 style="color:white;"> {{ message_password}}  {{message_telephone}} {{ sucess }} {{message_email }} </h3>
+            <div class="form-row user-change-row" style="display:block;">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="icon-user"></span>
+                        </div>
+                        <input type="text" id="" name="first_name" value="{{first_name}}" required="required" placeholder="Prénom" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row user-change-row" style="display:block;">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <!--<span class="icon-user"></span>-->
+                            <span class="icon-user"></span>
+                        </div>
+                        <input type="text" id="username" name="last_name" value="{{last_name}}" required="required" placeholder="Nom" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row user-change-row" style="display:block;">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </div>
+                        <input type="email" id="username" name="email" value="{{email}}" required="required" placeholder="Email" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row user-change-row" style="display:block;">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-earphone"></span>
+                        </div>
+                        <input type="tel" id="username" name="telephone" value="{{telephone}}" required="required" placeholder="Téléphone" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row user-change-row" style="display:block;">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
+                        <input type="password" id="username" name="password1" value="" required="required" placeholder="Mot de passe" class="form-control" minlength="8"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
+                        <input type="password" id="username" name="password2" value="" required="required" placeholder="Confirmez mot de passe" class="form-control" minlength="8"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                
+                    <!--<input type="submit" id="_submit" name="_submit" value="S'inscrire" class="btn btn-default btn-block btn-clean"/>-->
+
+
+                <button type="submit" id="_submit" name="_submit" value="S'inscrire" class="btn btn-default btn-block btn-clean"> S'inscrire </button>
+                    <a href="../../accounts" style="float:left;"> Se connecter </a>
+                    <a href="../forget_password" style="float:right">Mot de passe oublié ? </a>
+
+                </div>
+            </div>
+
+            <div class="form-row">
+                
+            </div>
+
+            <!--<div class="form-row">-->
+                <!--<div class="col-md-12">-->
+                    <!--<a href="../forget_password"-->
+                       <!--class="btn btn-link btn-block">Mot de passe oublié ?</a>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        </div>
+
+    </form>
+                </div>
+            </div>
+
+            <div class="choix_langue">
+
+                <div class="pays">
+                    <img src="{%static 'bundles/edepot/images/france.png'%}" width="25px"/>
+                </div>
+
+                <div class="pays">
+                    <img src="{%static 'bundles/edepot/images/portugal.png'%}" width="25px" />
+                </div>
+
+                <div class="pays">
+                    <img src="{%static 'bundles/edepot/images/angleterre.gif'%}" width="25px"/>
+                </div>
+
+                <div class="pays">
+                    <img src="{%static 'bundles/edepot/images/arabe.png'%}" width="25px"/>
+                </div>
+
+                <div class="pays">
+                    <img src="{%static 'bundles/edepot/images/drap_sn.png'%}" width="25px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+            </body>
+
+<!-- Mirrored from 213.246.59.111/allmedias07/web/web/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 May 2016 13:06:55 GMT -->
+</html>

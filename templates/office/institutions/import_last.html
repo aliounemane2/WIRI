@@ -1,0 +1,763 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="de" xmlns="http://www.w3.org/1999/html">  <!--<![endif]-->
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+<head>
+
+  <!-- META DATA -->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="UTF-8">
+  <title>WIRI - Institution  </title>
+    <meta name="description" content="A Template by RocknRolla Designs"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP"/>
+    <meta name="author" content="RocknRolla Designs"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600" rel="stylesheet" type="text/css">
+
+
+
+  <link rel="stylesheet" href="{% static 'css/skeleton.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/social.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}" type="text/css" media="screen"/><!-- PrettyPhoto -->
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" type="text/css"/><!-- PrettyPhoto -->
+  <link rel="stylesheet" href="{% static 'css/shortcodes.css' %}" type="text/css"/>
+  <link rel="stylesheet" href="{% static 'css/media.css' %}"><!-- Media Queries -->
+
+
+  <link rel="stylesheet" href="{% static 'files/themes_panel/themes_panel.css' %}"><!-- Theme Panel -->
+
+    <link id="layout_color" href="{% static 'css/light.css' %}" rel="stylesheet" type="text/css"/>
+    <link id="primary_color_scheme" href="{% static 'css/colors/yellow.css' %}" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="{%static 'files/themes_panel/themes_panel.css' %}"><!-- Theme Panel -->
+              <link href="{% static 'mane/bootstrap-datetimepicker.min.css' %}" rel="stylesheet" media="screen">
+          <link href="{%static 'bundles/edepot/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+
+
+
+
+    <!--[if lt IE 9]>
+    <![endif]-->
+
+
+    <!-- /Themes Panel -->
+
+
+    <style>
+        .nav>li {
+            display: inline-block;
+        }
+
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      label
+        {
+            /* width: 150px; */
+
+                display: block;
+                width: 200px;
+                float: left;
+        }
+    </style>
+
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 14.721760679027714, lng: -17.3858642578125},
+          zoom: 6
+        });
+
+
+
+        var marqueur = new google.maps.Marker({
+          position: map.getCenter(),
+          map: map,
+          draggable: true
+
+        });
+
+        marqueur.setMap(map);
+
+
+        marqueur.addListener('dragend', function(e) {
+
+          console.log(marqueur.getPosition().lat()+' * '+ marqueur.getPosition().lng());
+          var latitude = document.getElementById('id_latitude').value = marqueur.getPosition().lat();
+          var longitude = document.getElementById('id_longitude').value = marqueur.getPosition().lng();
+
+        });
+
+
+
+
+
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+    </script>
+
+
+</head>
+
+<body class="onepage" data-spy="scroll" data-target=".navigation">
+ <div id="load"></div>
+
+    <!-- START NAVIGATION -->
+    <nav class="light sticky-nav navigation">
+     <!-- START CONTAINER -->
+      <div class="container clearfix">
+          <div class="four columns">
+              <!-- START LOGO -->
+              <div class="logo large">
+               <a href="/"><img src="{% static 'images/logo.png' %}" title="logo" alt="Logo"/></a>
+              </div>
+              <!-- END LOGO -->
+          </div><!-- END FOUR COLUMNS -->
+
+
+          <div class="twelve columns">
+              <!-- START NAVIGATION MENU ITEMS -->
+              <ul class="main-menu large nav" id="nav">
+                  <li><a href="/dashboard">{{ request.session.first_name }} {{ request.session.last_name }}</a></li>
+                  <li><a href="/accounts/profil">Profil</a></li>
+                  <li><a href="/accounts/logout_account/">Déconnexion</a></li>
+              </ul>
+              <!-- END NAVIGATION MENU ITEMS -->
+          </div><!-- END TWELVE COLUMNS -->
+      </div><!-- END CONTAINER -->
+    </nav>
+    <!-- END NAVIGATION -->
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2R04WpsIXRt1q362wAHKhCW8uLi8ByNQ&callback=initMap">
+    </script>
+  <div id="map"></div>
+
+
+ <!-- START PAGE WRAP -->
+    <div id="blog-single" class="page-wrap">
+
+    	<!-- START PROJECT-SINGLE -->
+	    <div class="page multipage">
+
+
+
+            <!--<div id="map" style="width:500px; height:300px; float:right;"></div>-->
+
+
+
+
+
+
+
+
+
+
+
+		<div class="container">
+
+			<!--<div class="twelve columns">-->
+
+
+
+				<div class="post">
+                   <div class="post-media">
+
+
+					<div class="post-content">
+
+
+
+			<form method="post" enctype="multipart/form-data" action=".">
+                			{% csrf_token %}
+
+
+
+                <label for="name">  Nom de l'institution </label> {{ forminstitution.name  }}<br />
+                <label for="latitude"> Latitude </label> {{ spotform.latitude }}<br />
+                <label for="longitude"> Longitude </label> {{ spotform.longitude }}<br />
+                <label for="description"> Description de l'institution </label> {{ forminstitution.description  }}<br />
+                <label for="lundi"> Lundi </label>
+                <div style="display:inline-block;">
+
+                    <input type="hidden" name="Lundi" id="lundi"/>
+                         De <input type="time" name="time_degin1l" id="time_degin1l"/>
+                         A  <input type="time" name="time_end1l" id="time_end1l"/>
+                </div>
+                <div style="display:inline-block;">
+                    De <input type="time" name="time_degin2l" id="time_degin2l"/>
+                         A <input type="time" name="time_end2l" id="time_end2l"/>
+                </div>
+
+
+                 <br />
+
+
+
+                <label for="mardi">  Mardi</label>
+
+                <div style="display:inline-block;">
+
+
+                         <input type="hidden" name="Mardi" id="mardi"/> </td>
+                                De <input type="time" name="time_degin1m" id="time_degin1m"/>
+                                A  <input type="time" name="time_end1m" id="time_end1m"/>
+                </div>
+
+                <div style="display:inline-block;">
+
+                        De <input type="time" name="time_degin2m" id="time_degin2m"/>
+                        A <input type="time" name="time_end2m" id="time_end2m"/>
+
+                </div>
+                <br />
+
+
+                <label for="mercredi"> Mercredi </label>
+                    <div style="display:inline-block;">
+
+
+                          <input type="hidden" name="Mercredi" id="mercredi"/>
+                         De <input type="time" name="time_degin1me" id="time_degin1me"/>
+                         A  <input type="time" name="time_end1me" id="time_end1me"/>
+
+                    </div>
+                    <div style="display:inline-block;">
+
+                         De <input type="time" name="time_degin2me" id="time_degin2me"/>
+                         A <input type="time" name="time_end2me" id="time_end2me"/>
+                    </div>
+
+
+                <br />
+                <label for="jeudi"> Jeudi </label>
+
+                                <div style="display:inline-block;">
+
+
+                                <input type="hidden" name="Jeudi" id="jeudi"/>
+
+                              De <input type="time" name="time_degin1j" id="time_degin1j"/>
+                             A  <input type="time" name="time_end1j" id="time_end1j"/>
+
+                                </div>
+                                <div style="display:inline-block;">
+
+                           De <input type="time" name="time_degin2j" id="time_degin2j"/>
+                             A <input type="time" name="time_end2j" id="time_end2j"/>
+
+                                </div>
+
+
+
+
+
+                <br />
+                <label for="vendredi"> Vendredi </label>
+
+                                <div style="display:inline-block;">
+
+
+                  <input type="hidden" name="Vendredi" id="vendredi"/>
+                         De <input type="time" name="time_degin1v" id="time_degin1v"/>
+                         A  <input type="time" name="time_end1v" id="time_end1v"/>
+
+                                </div>
+                                <div style="display:inline-block;">
+
+                        De <input type="time" name="time_degin2v" id="time_degin2v"/>
+                        A <input type="time" name="time_end2v" id="time_end2v"/>
+                                </div>
+
+
+                <br />
+
+                <label for="samedi"> Samedi </label>
+
+                                <div style="display:inline-block;">
+
+                       <input type="hidden" name="Samedi" id="samedi"/>
+                        De <input type="time" name="time_degin1s" id="time_degin1s"/>
+                        A  <input type="time" name="time_end1s" id="time_end1s"/>
+                                </div>
+                                <div style="display:inline-block;">
+
+                       De <input type="time" name="time_degin2s" id="time_degin2s"/>
+                       A <input type="time" name="time_end2s" id="time_end2s"/>
+                                </div>
+
+
+                <br />
+                <label for="Dimanche"> Dimanche </label>
+                                <div style="display:inline-block;">
+
+                        <input type="hidden" name="Dimanche" id="dimanche"/>
+                       De <input type="time" name="time_degin1d" id="time_degin1d"/>
+                        A  <input type="time" name="time_end1d" id="time_end1d"/>
+                                </div>
+                                <div style="display:inline-block;">
+
+                        De <input type="time" name="time_degin2d" id="time_degin2d"/>
+                        A <input type="time" name="time_end2d" id="time_end2d"/>
+                                </div>
+
+                <br />
+
+                <label for="fichier">Fichier </label> {{ form.file}}<br />
+                <label for="jmtag">JM_TAG </label> {{ form.jm_tag}} <p style="color:red">{{message}}</p><br />
+                <label for="categorie"> Catégorie </label> {{ form.category}} <br />
+                <label for="Visibilite"> Visibilité </label> {{ form.is_public}} <br />
+
+                    <input type="submit" value="Enregistrer" style="background:#be0014;color:white;font-size:180%;width:136px;height:46px;font-family:Helvetica, Arial, sans-serif!important;" onclick="charger();"/>
+                    <a href="/dashboard" class="btn btn-info" role="button" style="color:white;background-color:#be0014; width:136px;height:47px;font-size:170%;vertical-align:top;font-family:Helvetica, Arial, sans-serif!important;">&nbsp;Annuler &nbsp;&nbsp; </a>
+
+            </form>
+
+
+
+
+
+			</p>
+              </div>
+				</div>
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+
+      <!-- START COPYRIGHT SECTION -->
+       <div class="copyright">
+     <div class="container clearfix">
+        <div class="sixteen columns">
+        <div class="copyright-logo"><a href="#"><img src="{% static 'images/logo2.png' %}" title="logo" alt="logo"/></a></div>
+           <div class="social-icons">
+
+              <div class="social-icon social-email"><a href="mailto:contact@wiri.com" target="_blank" data-original-title="Email">Email</a></div>
+              <div class="social-icon social-facebook"><a href="" target="_blank" data-original-title="Facebook">Facebook</a></div>
+              <div class="social-icon social-twitter"><a href="" target="_blank" data-original-title="Twitter">Twitter</a></div>
+              <div class="social-icon social-linkedin"><a href="" target="_blank" data-original-title="Linkedin">Linkedin</a></div>
+              <div class="social-icon social-googleplus"><a href="" target="_blank" data-original-title="Googleplus">Googleplus</a></div>
+              <div class="social-icon social-youtube"><a href="" target="_blank" data-original-title="Youtube">Youtube</a></div>
+              <div class="social-icon social-instagram"><a href="" target="_blank" data-original-title="Instagram">Instagram</a></div>
+
+           </div>
+            <center><p style="color:white;"> &copy; 2017 All Rights Reserved. By <a href="http://www.qualshore.com/fr/fr/accueil-2/">QUALSHORE</a></p></center>
+
+         </div> <!-- END SIXTEEN COLUMNS -->
+    </div><!-- END CONTAINER -->
+     </div>
+     <!-- END COPYRIGHT SECTION -->
+
+  </div>
+    <!-- END CONTACT SECTION -->
+
+
+   </div><!-- END PAGE WRAP -->
+
+   <div id="back-to-top">
+       <a href="#">Back to Top</a>
+   </div>
+
+
+
+  <!-- JARVIS THEME SCRIPTS -->
+
+
+</body>
+
+
+
+
+
+  <script type="text/javascript" src="{% static  'mane/jquery/jquery-1.8.3.min.js' %}"></script>
+
+       <script type="text/javascript">
+
+
+
+
+        $("input[type=time]").change(function() {
+
+
+            //  debut Lundi
+            a = $('#time_degin1l').val();
+            b = $('#time_end1l').val();
+            c = $('#time_degin2l').val();
+            d = $('#time_end2l').val();
+
+
+            if (b.length != 0){
+                if (a.length != 0){
+                    if ( b < a){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1l').val('');
+                    }else{}
+                }
+            }
+
+
+            if (c.length != 0){
+                if (b.length != 0){
+                    if ( c < b){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2l').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (d.length != 0){
+                if (c.length != 0){
+                    if ( d < c){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2l').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Lundi
+
+
+
+
+            //  debut Mardi
+            am = $('#time_degin1m').val();
+            bm = $('#time_end1m').val();
+            cm = $('#time_degin2m').val();
+            dm = $('#time_end2m').val();
+
+
+            if (bm.length != 0){
+                if (am.length != 0){
+                    if ( bm < am){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1m').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cm.length != 0){
+                if (bm.length != 0){
+                    if ( cm < bm){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2m').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dm.length != 0){
+                if (cm.length != 0){
+                    if ( dm < cm){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2m').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Mardi
+
+
+
+
+            //  debut Mercredi
+            ame = $('#time_degin1me').val();
+            bme = $('#time_end1me').val();
+            cme = $('#time_degin2me').val();
+            dme = $('#time_end2me').val();
+
+
+            if (bme.length != 0){
+                if (ame.length != 0){
+                    if ( bme < ame){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1me').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cme.length != 0){
+                if (bme.length != 0){
+                    if ( cme < bme){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2me').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dme.length != 0){
+                if (cme.length != 0){
+                    if ( dme < cme){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2me').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Mercredi
+
+
+
+
+
+            //  debut Jeudi
+            aj = $('#time_degin1j').val();
+            bj = $('#time_end1j').val();
+            cj = $('#time_degin2j').val();
+            dj = $('#time_end2j').val();
+
+
+            if (bj.length != 0){
+                if (aj.length != 0){
+                    if ( bj < aj){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1j').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cj.length != 0){
+                if (bj.length != 0){
+                    if ( cj < bj){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2j').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dj.length != 0){
+                if (cj.length != 0){
+                    if ( dj < cj){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2j').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Jeudi
+
+
+
+            //  debut Vendredi
+            av = $('#time_degin1v').val();
+            bv = $('#time_end1v').val();
+            cv = $('#time_degin2v').val();
+            dv = $('#time_end2v').val();
+
+
+            if (bv.length != 0){
+                if (av.length != 0){
+                    if ( bv < av){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1v').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cv.length != 0){
+                if (bv.length != 0){
+                    if ( cv < bv){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2v').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dv.length != 0){
+                if (cv.length != 0){
+                    if ( dv < cv){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2v').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Vendredi
+
+
+            //  debut Samedi
+            as = $('#time_degin1s').val();
+            bs = $('#time_end1s').val();
+            cs = $('#time_degin2s').val();
+            ds = $('#time_end2s').val();
+
+
+            if (bs.length != 0){
+                if (as.length != 0){
+                    if ( bs < as){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1s').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cs.length != 0){
+                if (bs.length != 0){
+                    if ( cs < bs){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2s').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (ds.length != 0){
+                if (cs.length != 0){
+                    if ( ds < cs){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2s').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Samedi
+
+
+
+
+            //  debut Dimanche
+            ad = $('#time_degin1d').val();
+            bd = $('#time_end1d').val();
+            cd = $('#time_degin2d').val();
+            dd = $('#time_end2d').val();
+
+
+            if (bd.length != 0){
+                if (ad.length != 0){
+                    if ( bd < ad){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1d').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cd.length != 0){
+                if (bd.length != 0){
+                    if ( cd < bd){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2d').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dd.length != 0){
+                if (cd.length != 0){
+                    if ( dd < cd){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2d').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Dimanche
+
+        });
+
+        </script>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+   <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
+   <!--<script type="text/javascript" src=" {% static 'js/pixlr.js' %}"></script>-->
+   <!--<script type="text/javascript" src=" {% static 'js/pixlr_min.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{ static 'js/jquery.min.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{ static 'js/jquery.tweet.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{ static 'js/jquery.form.js' %}"></script>-->
+    <script type="text/javascript" src="{% static 'js/jquery.queryloader2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.slabtext.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fittext.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/selectnav.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/isotope.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap-modal.js' %}"></script>
+    <!--<script type="text/javascript" src="{% static 'js/shortcodes.js' %}"></script>-->
+  <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    <!-- Themes Panel -->
+    <!--<script src="{% static 'files/themes_panel/themes_panel.js' %}"></script>-->
+
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+</html>
+
+

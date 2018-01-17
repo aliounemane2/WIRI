@@ -1,0 +1,774 @@
+body{
+
+}
+
+.none-padding{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.home-logo{
+	font-size: 27px;
+    margin-top: 5px;
+    display: inline-block !important;
+}
+
+.container-fluid{
+	padding-bottom: 30px;
+}
+
+.separate{
+	height: 1px;
+	width: 90%;
+	background: #fff;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	float: left;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/*************************  Background Menu  ************************/
+
+
+
+/*** Changement de la couleur du menu active de pour deposer oeuvre ***/
+#deposer-une-oeuvre nav.navbar ul.nav .active a{
+	color: #ff0000;
+}
+
+#deposer-une-oeuvre nav.navbar ul.nav .active span{
+
+}
+
+#deposer-une-oeuvre nav.navbar ul.nav .active{
+	background: url('../images/wallpapers/wall_num11.jpg') center top no-repeat fixed #000000;
+}
+
+
+
+
+/*** Changement de la couleur du menu active de pour consulter catalogue ***/
+
+#consulter-mon-catalogue nav.navbar ul.nav .active a{
+
+}
+
+#consulter-mon-catalogue nav.navbar ul.nav .active span{
+
+}
+
+#consulter-mon-catalogue nav.navbar ul.nav .active{
+	/*background: #333;*/
+	background: url('../images/wallpapers/wall_num11.jpg') center top no-repeat fixed #000000;
+}
+
+
+
+/*** Changement de la couleur du menu active de pour gerer mon profil ***/
+
+#gerer-mon-profil nav.navbar ul.nav .active a{
+
+}
+
+#gerer-mon-profil nav.navbar ul.nav .active span{
+
+}
+
+#gerer-mon-profil nav.navbar ul.nav .active{
+	/*background: #487737;*/
+	background: url('../images/wallpapers/wall_num11.jpg') center top no-repeat fixed #000000;
+}
+
+.color-icon-off{
+	color: gray;
+}
+
+
+
+
+/*** Changement de la couleur du menu active de pour suivre mon paiement ***/
+
+#suivre-mon-paiement nav.navbar ul.nav .active a{
+
+}
+
+#suivre-mon-paiement nav.navbar ul.nav .active span{
+
+}
+
+#suivre-mon-paiement nav.navbar ul.nav .active{
+	/*background: #40BABD;*/
+	background: url('../images/wallpapers/wall_num11.jpg') center top no-repeat fixed #000000;
+}
+
+
+
+
+
+/*** Changement de la couleur du menu active de pour générer des rapports ***/
+
+#generer-des-rapports nav.navbar ul.nav .active a{
+
+}
+
+#generer-des-rapports nav.navbar ul.nav .active span{
+
+}
+
+#generer-des-rapports nav.navbar ul.nav .active{
+	background: url('../images/wallpapers/wall_num11.jpg') center top no-repeat fixed #000000;
+}
+
+/*** Changement de la couleur du menu active de pour générer des rapports ***/
+
+#informations-pratiques nav.navbar ul.nav .active a{
+
+}
+
+#informations-pratiques nav.navbar ul.nav .active span{
+
+}
+
+#informations-pratiques nav.navbar ul.nav .active{
+	/*background: #003729;*/
+	background: url('../images/wallpapers/wall_num11.jpg') center top no-repeat fixed #000000;
+}
+
+
+/*** Home Header ***/
+#home .collapse ul.nav{
+	float: right;
+}
+
+.plus_button{
+	color: #fff;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.plus_button:hover , .plus_button_tab:hover{
+	cursor: pointer;
+}
+
+.plus_button_tab{
+	color: #fff;
+    padding: 2px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#suivre-mon-paiement table span.myicons{
+	display: inline-block;
+    margin: auto;
+    width: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#suivre-mon-paiement table span.myicons:hover{
+	cursor: pointer;
+}
+
+.navbar-nav > li > a > span{
+    left: 4px;
+}
+
+.navbar-nav > li > a{
+	padding: 13px 5px 9px 30px;
+}
+
+.notif-menu{
+	float: right;
+}
+
+.navbar-nav > li > a span{
+	color: white !important;
+}
+
+
+/*******************************  Photo de profil *******************************/
+
+.profile-image{
+	/*display: block;
+	margin: auto;
+	margin-top: 10px;
+	border: none;
+	border-radius: 0;
+	-webkit-transform: rotate(-45deg);
+	margin-top: 20px;display: block;*/
+	margin: auto;
+    display: block;
+}
+
+/**** Choisir langue ********/
+
+.choix_langue{
+	float: left;
+    /* margin: auto; */
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.choix_langue .pays{
+	margin-bottom: 20px;
+    margin-bottom: 20px;
+    /* min-width: 100px; */
+    display: inline-block;
+    /* width: 45%; */
+    margin-left: 5px;
+}
+
+.choix_langue .pays img{
+	width: 18px !important;
+}
+
+.choix_langue .pays div.radio{
+	margin-left: 10px;
+}
+
+.choix_langue .pays span{
+
+}
+
+.choix_langue .pays .radio input[type=radio],
+.choix_langue .pays .radio-inline input[type=radio],
+.choix_langue .pays .checkbox input[type=checkbox],
+.choix_langue .pays .checkbox-inline input[type=checkbox]{
+	margin-left: -10px;
+}
+
+
+.registration.choix_langue{
+	text-align: center;
+}
+
+.registration.choix_langue{
+
+}
+
+.langue-top .choix_langue{
+	text-align: right;
+	padding: 0px;
+}
+
+.langue-top .choix_langue .pays{
+	margin-bottom: 0px;
+}
+
+.langue-top{
+	width: auto;
+    margin-top: 13px;
+    float: right;
+}
+
+
+.navbar-nav > li > a{
+	font-weight: normal;
+	font-size: 10px;
+}
+
+/*********** Registration Page *************/
+.checkbox_registration{
+    width: auto;
+    display: inline-block;
+    padding: 0;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+
+/*************************  Dashboard  ************************/
+.dashboard{
+	/*margin-top: 50px;*/
+}
+
+.dashbord_item{
+	margin-bottom: 50px;
+    height: 75px;
+    position: relative;
+}
+
+.dashbord_item img{
+	width: 50px;
+    display: inline-block;
+    float: left;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.dashbord_item a{
+	display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+
+
+
+.dashbord_item .text-dashbord-item{
+	display: inline-block;
+    width: 80%;
+    height: 50px;
+    width: 100%;
+    padding-left: 80px;
+    border-radius: 10px;
+}
+
+.nav-tabs-vertical .tab-content{
+	width: 80%;
+    margin-left: 20%;
+}
+
+.nav-tabs-vertical .nav-tabs{
+	width: 20%;
+}
+
+.logo-dashbord img{
+
+}
+
+.logo-dashbord {
+	margin-bottom: 50px;
+}
+
+.logo-dashbord span{
+	display: block;
+	margin-top: 20px;
+	letter-spacing: 1.2px;
+	font-size: 16px;
+}
+
+
+
+
+
+#informations-Generales .visuel-img{
+	margin: auto;
+    display: inherit;
+    margin-top: 15px;
+}
+
+#informations-Generales .btDownload{
+	/*margin-bottom: 20px !important;*/
+	cursor: pointer;
+	opacity: 80;
+	filter: alpha(opacity=0);
+	height: 100%;
+	text-align: center;
+}
+
+
+
+#informations-oeuvre .time{
+	display: inline-block;
+	width: 75px;
+}
+
+.fragment-radio{
+	margin-left: 30px;
+	display: inline-block;
+}
+
+#informations-oeuvre .block-informations-oeuvre{
+	margin-bottom: 40px;
+}
+
+.radio input[type=radio],
+.radio-inline input[type=radio],
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox]{
+	margin-left: -10px;
+}
+
+.download-wav{
+	width: 60%;
+    min-width: 250px;
+    margin: auto;
+    display: block;
+}
+
+body#home .block .header h2 a{
+	font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+
+
+
+/************************* Déposer Oeuvre ************************/
+
+
+.block .user .info .informer span{
+	font-size: 10px;
+    font-weight: bold;
+    display: block;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+ .block .user .info .informer{
+	font-size: 18px;
+}
+
+.list .list-item .list-text p{
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.list .list-item .list-text .list-text-name{
+	font-size: 12px;
+}
+
+.list .list-item .list-text{
+	padding: 5px 5px 5px 5px;
+}
+
+.step{
+
+}
+
+.step .block .sous-block1 label, .step .block .sous-block2 label{
+	display: inline-block;
+}
+
+.step .block{
+	float: none;
+}
+
+.step .block{
+
+}
+
+.step .block .sous-block1{
+	width: 30%;
+    min-width: 150px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.step .block .sous-block2{
+	width: 65%;
+   display: inline-block;
+}
+
+.step .block .sous-block2 #uniform-test2{
+	margin-left: 0;
+}
+
+button.del_ayantdroit{
+	margin-top: -60px;
+}
+div.sous-block2 .required:after {
+    content: "*";
+}
+.fixed { height:700px; overflow:hidden;}
+.scrollit {height: 700px;overflow-y:scroll;}
+
+
+/************************* Déposer Oeuvre ************************/
+
+.filtre_cataloque{
+	margin-bottom: 50px;
+}
+
+.filtre_option{
+	margin-bottom: 20px;
+    width: 19%;
+    float: left;
+    margin-left: 1%;
+    min-width: 150px;
+}
+
+
+
+
+/************************* Déposer Oeuvre ************************/
+
+.filtre_rapport{
+	margin-bottom: 30px;
+}
+
+.filtre_rapport .chart_block input[type=date]{
+	width: 32.5%;
+	min-width: 150px;
+	display: inline-block;
+}
+
+.filtre_rapport .chart_block label{
+	width: 30%;
+	min-width: 150px;
+	display: inline-block;
+}
+
+.filtre_rapport .chart_block.selection{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.filtre_rapport .chart_block.selection label{
+	width: 30%;
+	min-width: 150px;
+	display: inline-block;
+}
+
+.filtre_rapport .chart_block.selection select{
+	width: 65%;
+	min-width: 150px;
+	display: inline-block;
+}
+
+div.prototype>div.block>div.sous-block2{
+	width: 100%;
+}
+div.prototype>div.block>div.sous-block2 div>div.block>div.sous-block2{
+	width: 100%;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+
+
+
+/************************* Footer ************************/
+
+footer{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+
+footer .navbar{
+	margin-bottom: 0px;
+
+}
+
+footer .navbar-brand{
+	height: auto;
+}
+
+.copyright{
+	height: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 11px;
+    float: right;
+}
+
+.copyright span{
+	display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+    color: gray;
+}
+
+
+.adresse{
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 50px;
+	letter-spacing: 1.5px;
+}
+
+
+
+
+/************************************************************* CSS 2 ***************************************************/
+.tab-content{
+	min-height: 300px;
+}
+
+.height-deposer-oeuvre{
+	min-height: 90px;
+}
+
+.gerer-paiement{
+	min-height: 55px;
+}
+
+.generer-rapport{
+	min-height: 55px;
+}
+
+.padding-block{
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.padding-block .block{
+	margin-bottom: 5px;
+}
+
+/************* Dashbord ******************/
+
+.dashbord-deposer-oeuvre{
+    background-image: url('../images/deposer-oeuvre.png');
+    background-size: 50%;
+    background-repeat: NO-REPEAT;
+    background-position: 90%;
+}
+
+
+
+/**** Suivre paiement ***/
+
+.filtre-button-paiement{
+	margin-bottom: 50px;
+}
+
+.filtre-button-paiement button{
+	width: 100%;
+}
+
+.block-details{
+	/*display: none;*/
+}
+
+.titre-dashbord{
+	color: #00B9F2;
+}
+
+div.timeDuree select{
+	display: inline-flex;
+	width: 15%;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.alert{
+	width: 95.5%;
+	padding: 10px;
+	margin: auto;
+}
+.alert li{
+	list-style: none;
+
+}
+.alert span.glyphicon{
+	margin-right: 5px;
+}
+
+li.underline {
+	border-bottom-style: solid;
+	border-bottom-width:1px;
+}
+
+.badge-error {
+	background-color: #b94a48;
+}
+
+#remember_me{
+	width: auto;
+    display: inline-block;
+    padding: 0px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+/********* Editer Profile *********/
+.editer-new{
+	
+}
+
+.editer-new .step .block .sous-block1{
+	width: 100%;	
+}
+
+.editer-new .step .block .sous-block2{
+	width: 100%;	
+}
+
+
+
+.edit-profil-back-block{
+	
+}
+
+.edit-profil-sous-block{
+	width: 90%;
+	background: rgba(0,0,0,0.3);
+    padding: 10px;
+    padding-bottom: 10px;
+    -moz-box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3);
+    height: 530px;
+}
+
+.style-submit{
+	background: rgba(0,0,0,0.2);
+	width: 60%;
+	min-width: 250px;
+	margin: auto;
+	display: block;
+	padding: 6px 12px;
+	font-size: 12px;
+	border-radius: 3px;
+	border: none;
+	margin-top: 5px;
+}
+
+#voir-plus-correspondance{
+	display: block;
+    text-align: center;
+}
+
+#voir-plus-correspondance:hover{
+	cursor: pointer;
+}
+
+
+.background-connexion{
+	// background: url('../images/background3.png') no-repeat center center fixed;
+	background: url('../images/splash_wiri.png') no-repeat center center fixed;
+	// Bonne background: url('../images/bg3.png') no-repeat center center fixed;
+	// background: url('../images/bg.png') no-repeat center center fixed;
+	background-size: cover;
+
+}
+
+.background-dashbord{
+	// background-image: url('../images/background.jpg');
+	background-image: url('../images/bg.png');
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+.dashboard .header h2{
+	font-size: 35px;
+	line-height: 1.2;
+}
+
+.back_register{
+	background: url('../images/background-connexion.png') center top no-repeat fixed #000000;
+	background-size: 100% 100%;
+}
+
+/*********************** Media Query *******************************/
+
+
+
+
+
+
+
+
+
+

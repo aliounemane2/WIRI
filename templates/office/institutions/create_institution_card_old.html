@@ -1,0 +1,827 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de">  <!--<![endif]-->
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:40:30 GMT -->
+<head>
+
+  <!-- META DATA -->
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="UTF-8">
+  <title>WIRI - Institution </title>
+    <meta name="description" content="A Template by RocknRolla Designs"/>
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP"/>
+    <meta name="author" content="RocknRolla Designs"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- GOOGLE WEB FONTS INCLUDE -->
+  <link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  
+  <!-- JARVIS THEME STYLESHEETS -->
+     
+  <link rel="stylesheet" href="{% static 'css/skeleton.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/social.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}" type="text/css" media="screen"/><!-- PrettyPhoto -->
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" type="text/css"/><!-- PrettyPhoto -->
+  <link rel="stylesheet" href="{% static 'css/shortcodes.css' %}" type="text/css"/>
+  <link rel="stylesheet" href="{% static 'css/media.css' %}"><!-- Media Queries -->
+
+
+   <link href="{%static 'bundles/edepot/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen"/>
+   <link href="{% static 'mane/bootstrap-datetimepicker.min.css' %}" rel="stylesheet" media="screen"/>
+
+         
+    
+   
+  <link rel="stylesheet" href="{% static 'files/themes_panel/themes_panel.css' %}"><!-- Theme Panel -->
+    
+    <link id="layout_color" href="{% static 'css/light.css' %}" rel="stylesheet" type="text/css"/>
+     
+    <link id="primary_color_scheme" href="{% static 'css/colors/yellow.css' %}" rel="stylesheet" type="text/css"/>
+       
+    <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+
+          /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+          #map {
+            height: 80%;
+            width: 80%;
+          }
+          /* Optional: Makes the sample page fill the window. */
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+
+    </style>
+
+</head>
+
+<body class="onepage" data-spy="scroll" data-target=".navigation">
+
+<!--<body class="multipage">-->
+
+
+<div id="map"></div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 14.721760679027714, lng: -17.3858642578125},
+          zoom: 6
+        });
+
+
+
+        var marqueur = new google.maps.Marker({
+          position: map.getCenter(),
+          map: map,
+          draggable: true
+
+        });
+
+        marqueur.setMap(map);
+
+
+        marqueur.addListener('dragend', function(e) {
+
+          console.log(marqueur.getPosition().lat()+' * '+ marqueur.getPosition().lng());
+          var latitude = document.getElementById('id_latitude').value = marqueur.getPosition().lat();
+          var longitude = document.getElementById('id_longitude').value = marqueur.getPosition().lng();
+
+        });
+
+
+
+
+
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2R04WpsIXRt1q362wAHKhCW8uLi8ByNQ&callback=initMap">
+    </script>
+
+
+<!-- Debut commentiare -->
+    <!--&lt;!&ndash; START NAVIGATION &ndash;&gt;-->
+    <!--<nav class="light sticky-nav navigation">-->
+     <!--&lt;!&ndash; START CONTAINER &ndash;&gt; -->
+      <!--<div class="container clearfix">      -->
+          <!--<div class="four columns">      -->
+              <!--&lt;!&ndash; START LOGO &ndash;&gt; -->
+              <!--<div class="logo large">-->
+               <!--<a href="/"><img src="{% static 'images/logo.png' %}" title="logo" alt="Logo"/></a>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; END LOGO &ndash;&gt;     -->
+          <!--</div>&lt;!&ndash; END FOUR COLUMNS &ndash;&gt;   -->
+          <!---->
+                   <!---->
+          <!--<div class="twelve columns">                -->
+              <!--&lt;!&ndash; START NAVIGATION MENU ITEMS &ndash;&gt;-->
+              <!--<ul class="main-menu large nav" id="nav">-->
+                  <!--<li><a href="/dashboard">{{ request.session.first_name }} {{ request.session.last_name }}  </a></li>-->
+                  <!--<li><a href="/accounts/profil">Profil</a></li>-->
+                  <!--<li><a href="/accounts/logout_account/">Deconnexion</a></li>-->
+              <!--</ul>-->
+              <!--&lt;!&ndash; END NAVIGATION MENU ITEMS &ndash;&gt;        -->
+          <!--</div>&lt;!&ndash; END TWELVE COLUMNS &ndash;&gt; -->
+      <!--</div>&lt;!&ndash; END CONTAINER &ndash;&gt;  -->
+    <!--</nav>-->
+    <!--&lt;!&ndash; END NAVIGATION &ndash;&gt;-->
+
+    <!-- START PAGE WRAP -->
+
+<!-- Fin block -->
+
+
+
+
+
+ <div id="load"></div>
+
+    <!-- START NAVIGATION -->
+    <nav class="light sticky-nav navigation">
+     <!-- START CONTAINER -->
+      <div class="container clearfix">
+          <div class="four columns">
+              <!-- START LOGO -->
+              <div class="logo large">
+               <a href="/"><img src="{% static 'images/logo.png' %}" title="logo" alt="Logo"/></a>
+              </div>
+              <!-- END LOGO -->
+          </div><!-- END FOUR COLUMNS -->
+
+
+          <div class="twelve columns">
+              <!-- START NAVIGATION MENU ITEMS -->
+              <ul class="main-menu large nav" id="nav">
+                  <li><a href="/dashboard">{{ request.session.first_name }} {{ request.session.last_name }}</a></li>
+                  <li><a href="/accounts/profil">Profil</a></li>
+                  <li><a href="/accounts/logout_account/">Deconnexion</a></li>
+              </ul>
+              <!-- END NAVIGATION MENU ITEMS -->
+          </div><!-- END TWELVE COLUMNS -->
+      </div><!-- END CONTAINER -->
+    </nav>
+    <!-- END NAVIGATION -->
+
+
+
+
+
+
+
+
+
+    <div id="blog" class="page-wrap">
+    
+      <!-- START PROJECT-SINGLE --> 
+      <div class="page multipage">
+
+    <div class="container"> 
+           <div class="row">  
+
+
+
+    <div class="container">
+    
+    
+                   
+    <form method="post" action="{% url 'save_pixlr_institution' %}">{% csrf_token %}
+
+        <h3 style="background-color:black;"> {{message}}</h3>
+           <div align="center">
+
+                       <table align="center" cellspacing="35">
+
+                           <tr>
+                               <td> Nom du Lieu </td>
+                               <td>
+                                    <input name="name" placeholder="name" type="text" required> <br>
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <td> Latitude </td>
+                               <td>
+                                   <input name="latitude" placeholder="latitude" type="number" required step="any"> <br>
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <td> Longitude</td>
+                               <td>
+                                     <input name="longitude" placeholder="longitude" type="number" required step="any"> <br>
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <td> Nom de l'instituion </td>
+                               <td>
+                                       <input name="name_institution" placeholder="Name Institution " type="text" required> <br>
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <td> Description de L'institution</td>
+                               <td>
+                                  <input name="description" placeholder="description" type="text" required> <br>
+                               </td>
+                           </tr>
+
+                           <tr>
+                               <td>JM_TAG</td>
+                               <td>
+                                   <input name="jm_tag" placeholder="JM TAG" type="text" required> <br>
+                               </td>
+                           </tr>
+
+                           <tr>
+                        <td> Lundi  <input type="checkbox" name="Lundi" id="lundi"/> </td>
+                        <td> De <input type="time" name="time_degin1l" id="time_degin1l"/> </td>
+                        <td> A  <input type="time" name="time_end1l" id="time_end1l"/> </td>
+                        <td> De <input type="time" name="time_degin2l" id="time_degin2l"/> </td>
+                        <td> A <input type="time" name="time_end2l" id="time_end2l"/> </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td> Mardi  <input type="checkbox" name="Mardi" id="mardi"/> </td>
+                        <td> De <input type="time" name="time_degin1m" id="time_degin1m"/> </td>
+                        <td> A  <input type="time" name="time_end1m" id="time_end1m"/> </td>
+                        <td> De <input type="time" name="time_degin2m" id="time_degin2m"/> </td>
+                        <td> A <input type="time" name="time_end2m" id="time_end2m"/> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td> Mercredi  <input type="checkbox" name="Mercredi" id="mercredi"/> </td>
+                        <td> De <input type="time" name="time_degin1me" id="time_degin1me"/> </td>
+                        <td> A  <input type="time" name="time_end1me" id="time_end1me"/> </td>
+                        <td> De <input type="time" name="time_degin2me" id="time_degin2me"/> </td>
+                        <td> A <input type="time" name="time_end2me" id="time_end2me"/> </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td> Jeudi  <input type="checkbox" name="Jeudi" id="jeudi"/> </td>
+                        <div class="ttttt" style="display:none;">
+                             <td> De <input type="time" name="time_degin1j" id="time_degin1j"/> </td>
+                            <td> A  <input type="time" name="time_end1j" id="time_end1j"/> </td>
+                            <td> De <input type="time" name="time_degin2j" id="time_degin2j"/> </td>
+                            <td> A <input type="time" name="time_end2j" id="time_end2j"/> </td>
+                        </div>
+
+
+                    </tr>
+
+
+                    <tr>
+                        <td> Vendredi  <input type="checkbox" name="Vendredi" id="vendredi"/> </td>
+                        <td> De <input type="time" name="time_degin1v" id="time_degin1v"/> </td>
+                        <td> A  <input type="time" name="time_end1v" id="time_end1v"/> </td>
+                        <td> De <input type="time" name="time_degin2v" id="time_degin2v"/> </td>
+                        <td> A <input type="time" name="time_end2v" id="time_end2v"/> </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td> Samedi  <input type="checkbox" name="Samedi" id="samedi"/> </td>
+                        <td> De <input type="time" name="time_degin1s" id="time_degin1s"/> </td>
+                        <td> A  <input type="time" name="time_end1s" id="time_end1s"/> </td>
+                        <td> De <input type="time" name="time_degin2s" id="time_degin2s"/> </td>
+                        <td> A <input type="time" name="time_end2s" id="time_end2s"/> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td> Dimanche  <input type="checkbox" name="Dimanche" id="dimanche"/> </td>
+                        <td> De <input type="time" name="time_degin1d" id="time_degin1d"/> </td>
+                        <td> A  <input type="time" name="time_end1d" id="time_end1d"/> </td>
+                        <td> De <input type="time" name="time_degin2d" id="time_degin2d"/> </td>
+                        <td> A <input type="time" name="time_end2d" id="time_end2d"/> </td>
+
+                    </tr>
+
+
+
+                           <tr>
+                               <td> Visibilite </td>
+                               <td>
+                                   <select name="is_public" id="is_public">
+
+                                       <option value="False"> NON </option>
+                                       <option value="True"> OUI </option>
+
+					                </select>
+
+                                </td>
+                           </tr>
+
+
+                           <tr>
+                               <td> Categorie</td>
+                               <td>
+                                   <select name="category" id="category">
+                                    {% for category in category %}
+                                        <option value="{{category.id}}"> {{category.name}}</option>
+                                    {% endfor %}
+					                </select>
+
+                                </td>
+                           </tr>
+
+
+                           <tr>
+                               <td>
+                                   <input type="submit" value="enregistrer"/>
+                                </td>
+
+                           </tr>
+
+                       </table>
+          </div>
+
+
+          </form>
+        </div>
+        </div> </div>
+
+
+
+       <!--&lt;!&ndash; START COPYRIGHT SECTION &ndash;&gt;     -->
+       <!--<div class="copyright clearfix">-->
+     <!--<div class="container clearfix">-->
+        <!--<div class="sixteen columns">   -->
+        <!--<div class="copyright-logo"><a href="#"><img src="{% static 'images/logo2.png' %}" title="logo" alt="logo"/></a></div>-->
+           <!--<div class="social-icons">-->
+              <!--<div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>-->
+              <!--<div class="social-icon social-aim"><a href="#" target="_blank" data-original-title="Aim">Aim</a></div>-->
+              <!--<div class="social-icon social-apple"><a href="http://apple.com/" target="_blank" data-original-title="Apple">Apple</a></div>-->
+              <!--<div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>-->
+              <!--<div class="social-icon social-blogger"><a href="#" target="_blank" data-original-title="Blogger">Blogger</a></div>-->
+              <!--<div class="social-icon social-delicious"><a href="#" target="_blank" data-original-title="Delicious">Delicious</a></div>-->
+              <!--<div class="social-icon social-deviantart"><a href="#" target="_blank" data-original-title="Deviantart">Deviantart</a></div>-->
+              <!--<div class="social-icon social-digg"><a href="#" target="_blank" data-original-title="Digg">Digg</a></div>-->
+              <!--<div class="social-icon social-dribbble"><a href="#" target="_blank" data-original-title="Dribbble">Dribbble</a></div>-->
+              <!--<div class="social-icon social-ember"><a href="#" target="_blank" data-original-title="Ember">Ember</a></div>-->
+              <!--<div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>-->
+              <!--<div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>-->
+              <!--<div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>-->
+           <!--</div>&lt;!&ndash; END COPYRIGHT SECTION &ndash;&gt;-->
+      <!--<p>&copy; 2012 All Rights Reserved. Designed by <a href="http://themeforest.net/user/RockNRollaDesigns">RockNRolla Designs</a></p>-->
+            <!---->
+         <!--</div> &lt;!&ndash; END SIXTEEN COLUMNS &ndash;&gt;        -->
+    <!--</div>&lt;!&ndash; END CONTAINER &ndash;&gt;-->
+     <!--</div>-->
+     <!--&lt;!&ndash; END COPYRIGHT SECTION &ndash;&gt;           -->
+         <!---->
+      <!--</div>-->
+      <!--&lt;!&ndash; END PAGE &ndash;&gt;-->
+      <!--<div id="back-to-top"><a href="#">Back to Top</a></div>    -->
+
+      <!--&lt;!&ndash; BEGIN THEME PANEL &ndash;&gt;-->
+  <!--<div id="themes_panel">-->
+    <!--<div id="themes_menu">-->
+        <!--<h4 style="text-align:center;">Style Switcher</h4>-->
+        <!---->
+      <!--<div class="segment">-->
+            <!--<h5>Layout Type</h5>-->
+        <!--<ul class="theme cookie_layout_style">-->
+                    <!--<li><a href="#" title="parallax" class="panel_btn">Parallax Version</a></li>                   -->
+                    <!--<li><a href="#" title="color-block" class="panel_btn">Colored Version</a></li>                -->
+                  <!--</ul>-->
+      <!--</div>         -->
+      <!--<div class="segment">-->
+            <!--<h5>Layout Color</h5>-->
+        <!--<ul class="theme cookie_layout_color">                            -->
+          <!--<li><a href="#" title="light" style="background: white; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="dark" style="background: black; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+      <!--</div>   -->
+
+      <!--<div class="segment">-->
+            <!--<h5>Menu Style</h5>-->
+        <!--<ul class="theme cookie_menu_style">                            -->
+                    <!--<li><a href="#" title="large" class="panel_btn">Large Menu</a></li>                   -->
+                    <!--<li><a href="#" title="small" class="panel_btn">Small Menu</a></li> -->
+                  <!--</ul>-->
+      <!--</div> -->
+            <!---->
+      <!--<div class="segment">-->
+            <!--<h5>Menu Color</h5>-->
+        <!--<ul class="theme cookie_menu_color">                            -->
+          <!--<li><a href="#" title="light" style="background: white; width: 30px; height: 15px;"></a></li>-->
+                    <!--<li><a href="#" title="dark" style="background: black; width: 30px; height: 15px;"></a></li>-->
+                  <!--</ul>-->
+      <!--</div>                  -->
+
+      <!--<div class="segment">-->
+        <!--<h5>Color Skins</h5>-->
+        <!--<ul class="theme cookie_colors">           -->
+                    <!--<li><a href="#" title="blue" style="background: steelblue; width: 30px; height: 15px;"></a></li> -->
+                    <!--<li><a href="#" title="mediumaquamarine" style="background: mediumaquamarine; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="tomato" style="background: tomato; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="yellow" style="background: #FFD600; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="green" style="background: #a0ce4e; width: 30px; height: 15px;"></a></li>  -->
+                    <!--<li><a href="#" title="darksalmon" style="background: darksalmon; width: 30px; height: 15px;"></a></li>                                  -->
+                  <!--</ul>-->
+      <!--</div>   -->
+            <!---->
+      <!---->
+                              <!---->
+      <!--<div class="segment noborder">-->
+        <!--<a class="reset" href="#">Click to Reset</a>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div id="toggle_button"><a href="#"></a></div>-->
+  <!--</div>-->
+<!-- END THEME PANEL -->       
+
+  <!-- JARVIS THEME SCRIPTS -->
+
+
+
+
+
+
+
+<script type="text/javascript" src="{% static  'mane/jquery/jquery-1.8.3.min.js' %}"></script>
+     <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap.min.js' %}"></script>
+     <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap-datetimepicker.js' %}"></script>
+     <script type="text/javascript" src="{% static  'mane/bootstrap/js/locales/bootstrap-datetimepicker.fr.js' %}"></script>
+
+
+
+
+        <script type="text/javascript">
+        $("input[type=time]").change(function() {
+
+            //  debut Lundi
+            a = $('#time_degin1l').val();
+            b = $('#time_end1l').val();
+            c = $('#time_degin2l').val();
+            d = $('#time_end2l').val();
+
+
+            if (b.length != 0){
+                if (a.length != 0){
+                    if ( b < a){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1l').val('');
+                    }else{}
+                }
+            }
+
+
+            if (c.length != 0){
+                if (b.length != 0){
+                    if ( c < b){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2l').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (d.length != 0){
+                if (c.length != 0){
+                    if ( d < c){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2l').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Lundi
+
+
+
+
+            //  debut Mardi
+            am = $('#time_degin1m').val();
+            bm = $('#time_end1m').val();
+            cm = $('#time_degin2m').val();
+            dm = $('#time_end2m').val();
+
+
+            if (bm.length != 0){
+                if (am.length != 0){
+                    if ( bm < am){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1m').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cm.length != 0){
+                if (bm.length != 0){
+                    if ( cm < bm){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2m').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dm.length != 0){
+                if (cm.length != 0){
+                    if ( dm < cm){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2m').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Mardi
+
+
+
+
+            //  debut Mercredi
+            ame = $('#time_degin1me').val();
+            bme = $('#time_end1me').val();
+            cme = $('#time_degin2me').val();
+            dme = $('#time_end2me').val();
+
+
+            if (bme.length != 0){
+                if (ame.length != 0){
+                    if ( bme < ame){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1me').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cme.length != 0){
+                if (bme.length != 0){
+                    if ( cme < bme){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2me').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dme.length != 0){
+                if (cme.length != 0){
+                    if ( dme < cme){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2me').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Mercredi
+
+
+
+
+
+            //  debut Jeudi
+            aj = $('#time_degin1j').val();
+            bj = $('#time_end1j').val();
+            cj = $('#time_degin2j').val();
+            dj = $('#time_end2j').val();
+
+
+            if (bj.length != 0){
+                if (aj.length != 0){
+                    if ( bj < aj){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1j').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cj.length != 0){
+                if (bj.length != 0){
+                    if ( cj < bj){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2j').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dj.length != 0){
+                if (cj.length != 0){
+                    if ( dj < cj){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2j').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Jeudi
+
+
+
+            //  debut Vendredi
+            av = $('#time_degin1v').val();
+            bv = $('#time_end1v').val();
+            cv = $('#time_degin2v').val();
+            dv = $('#time_end2v').val();
+
+
+            if (bv.length != 0){
+                if (av.length != 0){
+                    if ( bv < av){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1v').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cv.length != 0){
+                if (bv.length != 0){
+                    if ( cv < bv){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2v').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dv.length != 0){
+                if (cv.length != 0){
+                    if ( dv < cv){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2v').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Vendredi
+
+
+            //  debut Samedi
+            as = $('#time_degin1s').val();
+            bs = $('#time_end1s').val();
+            cs = $('#time_degin2s').val();
+            ds = $('#time_end2s').val();
+
+
+            if (bs.length != 0){
+                if (as.length != 0){
+                    if ( bs < as){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1s').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cs.length != 0){
+                if (bs.length != 0){
+                    if ( cs < bs){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2s').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (ds.length != 0){
+                if (cs.length != 0){
+                    if ( ds < cs){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2s').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Samedi
+
+
+
+
+            //  debut Dimanche
+            ad = $('#time_degin1d').val();
+            bd = $('#time_end1d').val();
+            cd = $('#time_degin2d').val();
+            dd = $('#time_end2d').val();
+
+
+            if (bd.length != 0){
+                if (ad.length != 0){
+                    if ( bd < ad){
+                            alert(' Veuillez changer cette valeur SVP ');
+                            $('#time_degin1d').val('');
+                    }else{}
+                }
+            }
+
+
+            if (cd.length != 0){
+                if (bd.length != 0){
+                    if ( cd < bd){
+                        alert(' Veuillez changer cette valeur SVP  ');
+                        $('#time_degin2d').val('');
+                    }
+                    else{}
+                }
+            }
+
+
+            if (dd.length != 0){
+                if (cd.length != 0){
+                    if ( dd < cd){
+                        alert(' Veuillez changer cette valeur SVP ');
+                        $('#time_end2d').val('');
+                    }else{}
+                }
+            }
+
+            // Fin Dimanche
+
+        });
+        </script>
+
+
+
+
+     <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.tweet.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.form.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.queryloader2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.slabtext.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.fittext.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/selectnav.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/shortcodes.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/isotope.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    <!-- Themes Panel -->
+    <script src="{% static 'files/themes_panel/themes_panel.js' %}"></script>
+    <!-- /Themes Panel -->
+
+    
+</body>
+
+
+<!-- Mirrored from demo.rocknrolladesigns.com/html/jarvis/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Mar 2016 12:41:02 GMT -->
+</html>
